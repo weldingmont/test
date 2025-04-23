@@ -30,11 +30,16 @@
 <header>
   <nav style="display: flex; width: 100%;">
     <ul class="left-nav">
-      <li><a href="index.html">Početna</a></li>
-      <li><a href="#o-nama">O nama</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="galerija.html">Galerija</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+      <li class="lang-sr"><a href="index.html">Početna</a></li>
+      <li class="lang-en"><a href="index.html">Home</a></li>
+      <li class="lang-sr"><a href="#o-nama">O nama</a></li>
+      <li class="lang-en"><a href="#o-nama">About</a></li>
+      <li class="lang-sr"><a href="#portfolio">Portfolio</a></li>
+      <li class="lang-en"><a href="#portfolio">Projects</a></li>
+      <li class="lang-sr"><a href="galerija.html">Galerija</a></li>
+      <li class="lang-en"><a href="galerija.html">Video Gallery</a></li>
+      <li class="lang-sr"><a href="#kontakt">Kontakt</a></li>
+      <li class="lang-en"><a href="#kontakt">Contact</a></li>
     </ul>
     <ul class="right-nav" style="margin-left: auto;">
       <li><a href="#" onclick="setLanguage('sr')">SR</a></li>
@@ -46,7 +51,7 @@
 <section class="video-background">
   <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" allowfullscreen></iframe>
   <div class="hero-overlay lang-sr">Dobrodošli na Weldingmont website</div>
-  <div class="hero-overlay lang-en">Welcome to Weldingmont website</div>
+  <div class="hero-overlay lang-en">Welcome to the Weldingmont website</div>
 </section>
 
 <main>
@@ -77,25 +82,39 @@
       <article><h3>Post 2</h3><p>Kratki opis posta 2...</p></article>
       <article><h3>Post 3</h3><p>Kratki opis posta 3...</p></article>
     </div>
-    <a href="blog.html" style="color: #4fc3f7;">Kliknite ovde da vidite sve objave</a>
+    <a href="blog.html" class="lang-sr" style="color: #4fc3f7;">Kliknite ovde da vidite sve objave</a>
+    <a href="blog.html" class="lang-en" style="color: #4fc3f7;">Click here to view all posts</a>
   </section>
 
   <section id="kontakt">
-    <div class="lang-sr"><h2>Kontaktirajte nas</h2></div>
-    <div class="lang-en"><h2>Contact Us</h2></div>
-    <p>Vlasnik: Sladjan Markovic</p>
-    <p>Email: weldingmontvr@gmail.com</p>
-    <p>Telefon: +381 65 826 2010</p>
-    <form action="https://formspree.io/f/xldbejpd" method="POST">
-      <label>Email:<br><input type="email" name="email" required></label><br><br>
-      <label>Poruka:<br><textarea name="message" required></textarea></label><br><br>
-      <button type="submit">Pošalji</button>
-    </form>
+    <div class="lang-sr">
+      <h2>Kontaktirajte nas</h2>
+      <p>Vlasnik: Sladjan Markovic</p>
+      <p>Email: weldingmontvr@gmail.com</p>
+      <p>Telefon: +381 65 826 2010</p>
+      <form action="https://formspree.io/f/xldbejpd" method="POST">
+        <label>Email:<br><input type="email" name="email" required></label><br><br>
+        <label>Poruka:<br><textarea name="message" required></textarea></label><br><br>
+        <button type="submit">Pošalji</button>
+      </form>
+    </div>
+    <div class="lang-en">
+      <h2>Contact Us</h2>
+      <p>Owner: Sladjan Markovic</p>
+      <p>Email: weldingmontvr@gmail.com</p>
+      <p>Phone: +381 65 826 2010</p>
+      <form action="https://formspree.io/f/xldbejpd" method="POST">
+        <label>Your email:<br><input type="email" name="email" required></label><br><br>
+        <label>Your message:<br><textarea name="message" required></textarea></label><br><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 Weldingmont | <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a></p>
+  <p class="lang-sr">&copy; 2025 Weldingmont | <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a></p>
+  <p class="lang-en">&copy; 2025 Weldingmont | <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a> | All rights reserved.</p>
 </footer>
 
 <script>
