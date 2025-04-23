@@ -10,17 +10,31 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="nav-left">
           <li><a href="/index.html">Početna</a></li>
           <li><a href="/blog.html">Blog</a></li>
           <li><a href="/galerija.html">Galerija</a></li>
           <li><a href="/#kontakt">Kontakt</a></li>
         </ul>
+        <ul class="nav-right">
+          <li><a href="#">SR</a></li>
+          <li><a href="#">EN</a></li>
+        </ul>
       </nav>
     </header>
+
+    <section class="hero">
+      <div class="hero-overlay">
+        <h1>Dobrodošli na Weldingmont website</h1>
+      </div>
+      <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4"
+              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+
     <main>
       {{ content }}
     </main>
+
     <footer>
       <p>&copy; 2025 Weldingmont | <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a></p>
     </footer>
