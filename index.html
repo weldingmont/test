@@ -5,65 +5,89 @@
     <title>Weldingmont</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .video-background {
-            position: relative;
-            overflow: hidden;
-            height: 100vh;
-            width: 100%;
-        }
-
-        .video-background iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-        }
-
+        body { margin: 0; font-family: Arial; background-color: #1e1e1e; color: #f0f0f0; }
+        .video-background { position: relative; height: 100vh; overflow: hidden; }
+        .video-background iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
         .hero-overlay {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 1.5rem 3rem;
-            font-size: 2rem;
-            text-align: center;
-            border-radius: 10px;
+            position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5); color: white; padding: 1rem 2rem; font-size: 2rem; border-radius: 8px;
         }
-
-        #o-nama {
-            padding: 2rem;
-        }
-
-        #o-nama h2 {
-            text-align: left;
-            margin-bottom: 1rem;
-        }
-
-        #o-nama p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
+        header { background: #333; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+        nav ul { list-style: none; display: flex; padding: 0; margin: 0; }
+        nav ul li { margin: 0 1rem; }
+        nav ul li a { color: white; text-decoration: none; }
+        main section { padding: 2rem; max-width: 1000px; margin: auto; }
+        h2 { border-bottom: 2px solid #444; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+        .posts-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        iframe.youtube { width: 100%; height: 200px; border: none; }
+        footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
     </style>
 </head>
 <body>
-    <header></header>
 
-    <section class="video-background">
-        <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" frameborder="0" allowfullscreen></iframe>
-        <div class="hero-overlay">Dobrodošli na Weldingmont website</div>
+<header>
+    <nav>
+        <ul class="left-nav">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="#o-nama">O nama</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="galerija.html">Galerija snimaka</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <ul class="right-nav">
+            <li><a href="#" onclick="switchLanguage()">SR / EN</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="video-background">
+    <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" allowfullscreen></iframe>
+    <div class="hero-overlay">Dobrodošli na Weldingmont website</div>
+</section>
+
+<main>
+    <section id="o-nama">
+        <h2>O nama</h2>
+        <p>Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
+        <p>Naše usluge obuhvataju:<br>
+        • Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)<br>
+        • Obrada metala: sečenje, savijanje, zavarivanje</p>
+        <p>Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834, čime je poslovanje usklađeno sa međunarodnim standardima. Sertifikaciju je izvršilo renomirano sertifikaciono telo Alcumus ISOQAR Limited iz Mančestera.</p>
     </section>
 
-    <main>
-        <section id="o-nama">
-            <h2>O nama</h2>
-            <p>Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
-            <p>Naše usluge obuhvataju:<br>
-            • Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)<br>
-            • Obrada metala: sečenje, savijanje, zavarivanje</p>
-            <p>Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834, čime je poslovanje usklađeno sa međunarodnim standardima. Sertifikaciju je izvršilo renomirano sertifikaciono telo Alcumus ISOQAR Limited iz Mančestera.</p>
-        </section>
-    </main>
+    <section id="portfolio">
+        <h2>Portfolio projekata</h2>
+        <div class="posts-preview">
+            <article><h3>Post 1</h3><p>Kratki opis posta 1...</p></article>
+            <article><h3>Post 2</h3><p>Kratki opis posta 2...</p></article>
+            <article><h3>Post 3</h3><p>Kratki opis posta 3...</p></article>
+        </div>
+        <a href="blog.html" style="color: #4fc3f7;">Kliknite ovde da vidite sve objave</a>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <p>Vlasnik: Sladjan Markovic</p>
+        <p>Email: weldingmontvr@gmail.com</p>
+        <p>Telefon: +381 65 826 2010</p>
+        <form action="https://formspree.io/f/xldbejpd" method="POST">
+            <label>Email:<br><input type="email" name="email" required></label><br><br>
+            <label>Poruka:<br><textarea name="message" required></textarea></label><br><br>
+            <button type="submit">Pošalji</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Weldingmont | <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a></p>
+</footer>
+
+<script>
+    function switchLanguage() {
+        const lang = document.documentElement.lang;
+        document.documentElement.lang = lang === "en" ? "sr" : "en";
+    }
+</script>
+
 </body>
 </html>
