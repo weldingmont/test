@@ -1,15 +1,74 @@
----
-layout: default
-title: Početna
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weldingmont</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="left-nav">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="#o-nama">O nama</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="galerija.html">Galerija snimaka</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <ul class="right-nav">
+                <li><a href="#" id="language-switch" onclick="switchLanguage()">SR/EN</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h1>Najnovije objave</h1>
-<div class="posts-preview">
-{% for post in site.posts limit:3 %}
-  <article>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p>{{ post.excerpt }}</p>
-  </article>
-{% endfor %}
-</div>
-<a href="/blog.html">Kliknite ovde da vidite sve objave</a>
+    <main>
+        <!-- YouTube hero video background -->
+        <section id="hero">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" frameborder="0" allowfullscreen></iframe>
+            <h1 class="hero-title">Dobrodošli na Weldingmont</h1>
+        </section>
+
+        <!-- O nama -->
+        <section id="o-nama">
+            <h2>O nama</h2>
+            <p>Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope...</p>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio">
+            <h2>Portfolio projekata</h2>
+            <div class="posts-preview">
+                <article><h3>Post 1</h3><p>Kratki opis posta 1...</p></article>
+                <article><h3>Post 2</h3><p>Kratki opis posta 2...</p></article>
+                <article><h3>Post 3</h3><p>Kratki opis posta 3...</p></article>
+            </div>
+            <a href="blog.html" class="view-all-posts">Kliknite ovde da vidite sve objave</a>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="kontakt">
+            <h2>Kontaktiraj nas</h2>
+            <p>Vlasnik: Sladjan Markovic<br>Email: weldingmontvr@gmail.com<br>Telefon: +381 65 826 2010</p>
+            <form action="https://formspree.io/f/xldbejpd" method="POST" id="contact-form">
+                <label>Email:<br><input type="email" name="email" required></label><br>
+                <label>Poruka:<br><textarea name="message" required></textarea></label><br>
+                <button type="submit">Pošalji</button>
+            </form>
+            <p><a href="Weldingmont_Brosura_SR.pdf" download>📎 Preuzmi brošuru (SR)</a> | <a href="Weldingmont_Brochure_EN.pdf" download>📎 Download brochure (EN)</a></p>
+            <iframe src="https://maps.google.com/maps?q=Vranje&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Weldingmont | <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a></p>
+    </footer>
+
+    <script>
+        function switchLanguage() {
+            const currentLang = document.documentElement.lang;
+            document.documentElement.lang = currentLang === "en" ? "sr" : "en";
+        }
+    </script>
+</body>
+</html>
