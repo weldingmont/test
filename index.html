@@ -8,21 +8,25 @@
     body { margin: 0; font-family: Arial; background-color: #1e1e1e; color: #f0f0f0; }
     .video-background { position: relative; height: 100vh; overflow: hidden; }
     .video-background iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
-    .hero-overlay {
-      position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.5); color: white; padding: 1rem 2rem; font-size: 2rem; border-radius: 8px;
+    .hero-text {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 3rem;
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: bold;
+      text-align: center;
+      z-index: 2;
     }
     header { background: #333; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
     nav ul { list-style: none; display: flex; padding: 0; margin: 0; }
     nav ul li { margin: 0 1rem; }
     nav ul li a { color: white; text-decoration: none; }
-    nav .left-nav { flex-grow: 1; }
     main section { padding: 2rem; max-width: 1000px; margin: auto; }
     h2 { border-bottom: 2px solid #444; padding-bottom: 0.5rem; margin-bottom: 1rem; }
-    .posts-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    iframe.youtube { width: 100%; height: 200px; border: none; }
-    footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
     .lang-sr, .lang-en { display: none; }
+    footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
   </style>
 </head>
 <body>
@@ -50,9 +54,10 @@
 
 <section class="video-background">
   <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" allowfullscreen></iframe>
-  <div class="hero-overlay lang-sr">Dobrodošli na Weldingmont website</div>
-  <div class="hero-overlay lang-en">Welcome to the Weldingmont website</div>
+  <div class="hero-text lang-sr">Dobrodošli na Weldingmont website</div>
+  <div class="hero-text lang-en">Welcome to the Weldingmont website</div>
 </section>
+
 
 <main>
   <section id="o-nama">
