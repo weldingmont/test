@@ -1,4 +1,4 @@
-/* Global */
+/* Global styling */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,7 +9,8 @@ header {
   background: #222;
   padding: 10px 20px;
   position: fixed;
-  top: 0; width: 100%;
+  top: 0;
+  width: 100%;
   z-index: 1000;
 }
 .navbar {
@@ -46,17 +47,24 @@ main {
 .hero {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   overflow: hidden;
 }
 .hero iframe {
   position: absolute;
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
+}
+.hero-content {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
 .hero-content h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 /* Onama */
 .onama-section {
@@ -67,6 +75,9 @@ main {
 }
 .onama-text, .onama-image {
   flex: 1 1 300px;
+}
+.onama-text {
+  text-align: left;
 }
 .onama-image img {
   max-width: 100%;
@@ -83,13 +94,14 @@ main {
 }
 .blog-posts iframe {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 500/665;
 }
 /* Galerija */
 .videogrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
+  margin-top: 20px;
 }
 .videogrid iframe {
   width: 100%;
@@ -122,8 +134,9 @@ footer {
   margin-top: 40px;
   padding: 20px 0;
   background: #222;
+  text-align: center;
 }
-footer a, footer p {
+footer p, footer a {
   color: #fff;
   text-decoration: none;
 }
