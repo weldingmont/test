@@ -16,7 +16,9 @@ header {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+}
+.nav-links {
+  display: flex;
   gap: 20px;
 }
 .nav-links a {
@@ -25,7 +27,7 @@ header {
   font-weight: bold;
 }
 .language-switcher {
-  margin-left: 20px;
+  margin-left: auto;
 }
 .language-switcher a {
   color: #fff;
@@ -41,6 +43,7 @@ main {
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 /* Hero */
 .hero {
@@ -59,13 +62,12 @@ main {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
 .hero-content h1 {
   font-size: 4rem;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
-/* Contact on Home */
+/* Contact Section on Home */
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -80,6 +82,9 @@ main {
   padding: 20px;
   border-radius: 8px;
   text-align: left;
+}
+.contact-info a {
+  color: #0066cc;
 }
 .contact-map iframe {
   width: 100%;
@@ -113,6 +118,8 @@ main {
 /* Portfolio */
 .portfolio-section {
   margin-top: 20px;
+}
+.portfolio-section h1, .portfolio-section p {
   text-align: center;
 }
 .portfolio-section .blog-posts {
@@ -131,7 +138,10 @@ main {
   grid-template-columns: repeat(3,1fr);
   gap: 20px;
   margin-top: 20px;
+}
+.videogrid h1 {
   text-align: center;
+  grid-column: 1/-1;
 }
 .videogrid iframe {
   width: 100%;
@@ -144,7 +154,7 @@ footer {
   background: #222;
   text-align: center;
 }
-footer p, footer a {
+footer a, footer p {
   color: #fff;
   text-decoration: none;
 }
