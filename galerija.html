@@ -14,9 +14,9 @@
       <a href="index.html" class="lang en">Home</a>
       <a href="onama.html" class="lang sr">O nama</a>
       <a href="onama.html" class="lang en">About us</a>
-      <a href="portfolio.html" class="lang sr">Portfolio Projekata</a>
+      <a href="portfolio.html" class="lang sr">Portfolio</a>
       <a href="portfolio.html" class="lang en">Projects</a>
-      <a href="galerija.html" class="lang sr">Galerija snimaka</a>
+      <a href="galerija.html" class="lang sr">Galerija</a>
       <a href="galerija.html" class="lang en">Video gallery</a>
       <a href="kontakt.html" class="lang sr">Kontakt</a>
       <a href="kontakt.html" class="lang en">Contact</a>
@@ -30,8 +30,7 @@
 
 <main>
   <section class="videogrid" id="gallery">
-    <h1 class="lang sr">Galerija snimaka</h1>
-    <h1 class="lang en">Video gallery</h1>
+    <h1 class="lang sr">Galerija snimaka</h1><h1 class="lang en">Video gallery</h1>
     <iframe src="https://www.youtube.com/embed/RJxZ5XMDtuU" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/dEMYrjXp0Jw" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/14UBO7IYtBs" allowfullscreen></iframe>
@@ -52,6 +51,7 @@ function switcher(lang) {
 }
 document.getElementById('btn-sr').onclick = () => switcher('sr');
 document.getElementById('btn-en').onclick = () => switcher('en');
+// default to SR
 switcher('sr');
 </script>
 </body>

@@ -14,9 +14,9 @@
       <a href="index.html" class="lang en">Home</a>
       <a href="onama.html" class="lang sr">O nama</a>
       <a href="onama.html" class="lang en">About us</a>
-      <a href="portfolio.html" class="lang sr">Portfolio Projekata</a>
+      <a href="portfolio.html" class="lang sr">Portfolio</a>
       <a href="portfolio.html" class="lang en">Projects</a>
-      <a href="galerija.html" class="lang sr">Galerija snimaka</a>
+      <a href="galerija.html" class="lang sr">Galerija</a>
       <a href="galerija.html" class="lang en">Video gallery</a>
       <a href="kontakt.html" class="lang sr">Kontakt</a>
       <a href="kontakt.html" class="lang en">Contact</a>
@@ -38,8 +38,7 @@
   </section>
   <section class="contact-section" id="contact">
     <div class="contact-info">
-      <h2 class="lang sr">Kontaktirajte nas</h2>
-      <h2 class="lang en">Contact Us</h2>
+      <h2 class="lang sr">Kontaktirajte nas</h2><h2 class="lang en">Contact Us</h2>
       <p><strong class="lang sr">Vlasnik:</strong><strong class="lang en">Owner:</strong> Sladjan Marković</p>
       <p><strong>Email:</strong> weldingmontvr@gmail.com</p>
       <p><strong class="lang sr">Telefon:</strong><strong class="lang en">Phone:</strong> +381 65 826 2010</p>
@@ -47,9 +46,7 @@
       <p class="lang en">📎 <a href="Weldingmont_Brochure_EN_better.pdf" download>Download brochure (EN)</a></p>
       <p><a href="https://www.facebook.com/weldingmont" target="_blank" class="lang sr">Facebook</a><a href="https://www.facebook.com/weldingmont" target="_blank" class="lang en">Facebook</a></p>
     </div>
-    <div class="contact-map">
-      <iframe src="https://maps.google.com/maps?q=42.5281341,21.9071812&z=17&output=embed" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <div class="contact-map"><iframe src="https://maps.google.com/maps?q=42.5281341,21.9071812&z=17&output=embed" frameborder="0" allowfullscreen></iframe></div>
   </section>
 </main>
 <footer>
@@ -64,6 +61,7 @@ function switcher(lang) {
 }
 document.getElementById('btn-sr').onclick = () => switcher('sr');
 document.getElementById('btn-en').onclick = () => switcher('en');
+// default to SR
 switcher('sr');
 </script>
 </body>
