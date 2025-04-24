@@ -1,71 +1,78 @@
-/* Osnovni stilovi */
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
 }
 
-/* Header stilovi */
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+/* Header */
+.header {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
 }
 
-header nav ul.left-nav {
-    justify-content: flex-start;
+nav a {
+  padding: 10px;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
 }
 
-header nav ul.right-nav {
-    justify-content: flex-end;
-    margin-left: auto;
-}
-
-header nav ul li {
-    margin: 0 1rem;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-.hero-video {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-}
-.hero-video iframe {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.video-overlay {
+video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(30, 30, 30, 0.4); /* poluprovidna tamna pozadina */
-}
-.video-overlay h1 {
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
 }
 
+/* Video Background */
+.video-background {
+  position: relative;
+  height: 100vh;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Portfolio */
+.portfolio-posts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post {
+  width: 30%;
+  background-color: #444;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+}
