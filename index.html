@@ -3,82 +3,96 @@ layout: default
 title: Početna
 ---
 
-<section class="hero-video">
-  <div class="video-overlay">
-    <h1>Dobrodošli na Weldingmont</h1>
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weldingmont</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">O nama</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#gallery">Galerija</a>
+      <a href="#contact">Kontakt</a>
+      <a href="#language">🇷🇸 / 🇬🇧</a>
+    </nav>
   </div>
-  <iframe
-    src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
-  ></iframe>
-</section>
-<section id="hero" style="position: relative; height: 100vh; overflow: hidden;">
-  <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 1;" 
-    src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4&controls=0&showinfo=0&modestbranding=1"
-    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  <h1 class="lang-sr" style="position: relative; z-index: 2; text-align: center; margin-top: 40vh; font-size: 3em; color: rgba(255,255,255,0.85);">Dobrodošli na Weldingmont website</h1>
-  <h1 class="lang-en" style="display:none; position: relative; z-index: 2; text-align: center; margin-top: 40vh; font-size: 3em; color: rgba(255,255,255,0.85);">Welcome to the Weldingmont website</h1>
-</section>
 
-<section id="o-nama">
-  <h2 class="lang-sr">O nama</h2>
-  <p class="lang-sr">
-    Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.<br><br>
-    Naše usluge obuhvataju:<br>
-    • Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)<br>
-    • Obrada metala: sečenje, savijanje, zavarivanje<br><br>
-    Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834, čime je poslovanje usklađeno sa međunarodnim standardima. Sertifikaciju je izvršilo renomirano sertifikaciono telo Alcumus ISOQAR Limited iz Mančestera.
-  </p>
+  <!-- YouTube Video Background -->
+  <section id="home" class="video-background">
+    <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&loop=1&mute=1&playlist=PVL1ls59Us4" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <h1>Dobrodošli na Weldingmont website</h1>
+  </section>
 
-  <h2 class="lang-en" style="display:none;">About Us</h2>
-  <p class="lang-en" style="display:none;">
-    Weldingmont Ltd. is a company from Vranje founded in 2017. We specialize in the production and installation of metal structures across Serbia and Europe.<br><br>
-    Our services include:<br>
-    • Metal structures and assembly (halls, buildings, bridges, piles, fences, staircases, canopies, etc.)<br>
-    • Metal processing: cutting, bending, welding<br><br>
-    Weldingmont has successfully implemented a quality management system in accordance with ISO 9001:2015 and BS EN ISO 3834 standards. The certification was conducted by Alcumus ISOQAR Limited, Manchester.
-  </p>
-</section>
+  <!-- About Section -->
+  <section id="about">
+    <h2>O nama</h2>
+    <p>
+      Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope. Naše usluge obuhvataju:
+      <ul>
+        <li>Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)</li>
+        <li>Obrada metala: sečenje, savijanje, zavarivanje</li>
+      </ul>
+      Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834.
+    </p>
+  </section>
 
-<section id="portfolio">
-  <h2 class="lang-sr">Portfolio projekata</h2>
-  <h2 class="lang-en" style="display:none;">Project Portfolio</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-    {% for post in site.posts limit:4 %}
-    <div>
-      <h3>{{ post.title }}</h3>
-      {{ post.content }}
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Portfolio Projekata</h2>
+    <div class="portfolio-posts">
+      <div class="post">
+        <h3>Post 1</h3>
+        <p>Opis projekta...</p>
+        <a href="#">Kliknite ovde da vidite sve objave</a>
+      </div>
+      <div class="post">
+        <h3>Post 2</h3>
+        <p>Opis projekta...</p>
+        <a href="#">Kliknite ovde da vidite sve objave</a>
+      </div>
+      <div class="post">
+        <h3>Post 3</h3>
+        <p>Opis projekta...</p>
+        <a href="#">Kliknite ovde da vidite sve objave</a>
+      </div>
     </div>
-    {% endfor %}
-  </div>
-  <p><a href="blog.html">Kliknite ovde da vidite sve objave</a></p>
-</section>
+  </section>
 
-<section id="kontakt">
-  <h2 class="lang-sr">Kontaktirajte nas</h2>
-  <h2 class="lang-en" style="display:none;">Contact Us</h2>
-  <p>Vlasnik: Sladjan Marković</p>
-  <p>Email: weldingmontvr@gmail.com</p>
-  <p>Telefon: +381 65 826 2010</p>
-  <a href="https://maps.app.goo.gl/LvHd1m7Py3HwXy4d6" target="_blank">📍 Pogledaj lokaciju</a>
-  <div style="margin-top: 10px;">
-    <a href="Weldingmont_Brosura_SR.pdf" class="lang-sr" download title="Preuzmi brošuru">📎 Preuzmi brošuru (SR)</a>
-    <a href="Weldingmont_Brochure_EN.pdf" class="lang-en" style="display:none;" download title="Download brochure">📎 Download brochure (EN)</a>
-  </div>
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Galerija Snimaka</h2>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/RJxZ5XMDtuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dEMYrjXp0Jw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
 
-  <div class="form-block" style="background-color: #2a2a2a; padding: 20px; margin-top: 20px;">
-    <h3 class="lang-sr">📬 Formular za kontakt</h3>
-    <h3 class="lang-en" style="display:none;">📬 Contact Form</h3>
-    <form action="https://formspree.io/f/xldbejpd" method="POST">
-      <label class="lang-sr">Vaš email:<br><input type="email" name="email" required></label>
-      <label class="lang-en" style="display:none;">Your email:<br><input type="email" name="email" required></label>
-      <label class="lang-sr">Vaša poruka:<br><textarea name="message" required></textarea></label>
-      <label class="lang-en" style="display:none;">Your message:<br><textarea name="message" required></textarea></label>
-      <br>
-      <button type="submit" class="lang-sr">Pošalji</button>
-      <button type="submit" class="lang-en" style="display:none;">Send</button>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Kontaktirajte nas</h2>
+    <p>Vlasnik: Sladjan Marković</p>
+    <p>Email: weldingmontvr@gmail.com</p>
+    <p>Telefon: +381 65 826 2010</p>
+    <p>📍 Pogledaj lokaciju:</p>
+    <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    
+    <form action="your_form_action_here">
+      <input type="email" name="email" placeholder="Vaš email" required>
+      <textarea name="message" placeholder="Vaša poruka" required></textarea>
+      <button type="submit">Pošaljite</button>
     </form>
-  </div>
-</section>
+    <a href="brochure.pdf" download="Brošura">Preuzmi brošuru</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Nikola Markovic - Sva prava zadržana</p>
+    <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a>
+  </footer>
+</body>
+</html>
