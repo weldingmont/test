@@ -1,24 +1,45 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="sr" data-lang="sr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weldingmont - Galerija snimaka</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header>
-  <ul>
-    <li><a href="index.html" target="_blank">Home</a></li>
-    <li><a href="onama.html" target="_blank">O nama</a></li>
-    <li><a href="portfolio.html" target="_blank">Portfolio Projekata</a></li>
-    <li><a href="galerija.html" target="_blank">Galerija snimaka</a></li>
-    <li><a href="kontakt.html" target="_blank">Kontakt</a></li>
-  </ul>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html#hero" class="lang sr">Početna</a><a href="index.html#hero" class="lang en">Home</a></li>
+      <li><a href="onama.html" class="lang sr">O nama</a><a href="onama.html" class="lang en">About us</a></li>
+      <li><a href="portfolio.html" class="lang sr">Portfolio Projekata</a><a href="portfolio.html" class="lang en">Projects</a></li>
+      <li><a href="galerija.html" class="lang sr">Galerija snimaka</a><a href="galerija.html" class="lang en">Video gallery</a></li>
+      <li><a href="index.html#contact" class="lang sr">Kontakt</a><a href="index.html#contact" class="lang en">Contact</a></li>
+    </ul>
+    <div class="language-switcher">
+      <img id="btn-sr" src="images/sr.png" alt="SR">
+      <img id="btn-en" src="images/en.png" alt="EN">
+    </div>
+  </nav>
 </header>
+<script>
+  function switcher(lang) {
+    document.body.datasetLang = lang;
+    document.querySelectorAll('.lang').forEach(el => {
+      el.style.display = el.classList.contains(lang) ? '' : 'none';
+    });
+  }
+  document.getElementById('btn-sr').onclick = () => switcher('sr');
+  document.getElementById('btn-en').onclick = () => switcher('en');
+  switcher('sr');
+</script>
+
+
 <main>
-  <h1>Galerija snimaka</h1>
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
+  <h1 class="lang sr">Galerija snimaka</h1>
+  <h1 class="lang en">Video gallery</h1>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:20px;">
     <iframe src="https://www.youtube.com/embed/RJxZ5XMDtuU" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/dEMYrjXp0Jw" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/14UBO7IYtBs" allowfullscreen></iframe>
@@ -27,5 +48,6 @@
     <iframe src="https://www.youtube.com/embed/5QwkbQ_Ouys" allowfullscreen></iframe>
   </div>
 </main>
+
 </body>
 </html>
