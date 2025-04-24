@@ -1,32 +1,22 @@
 <!DOCTYPE html>
-<html lang="sr" data-lang="sr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weldingmont – O nama</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+<html lang="sr" data-lang="sr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>O nama</title><link rel="stylesheet" href="styles.css"></head><body>
 <header>
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="index.html#hero" class="lang sr">Početna</a><a href="index.html#hero" class="lang en">Home</a></li>
-      <li><a href="onama.html" class="lang sr">O nama</a><a href="onama.html" class="lang en">About us</a></li>
-      <li><a href="portfolio.html" class="lang sr">Portfolio Projekata</a><a href="portfolio.html" class="lang en">Projects</a></li>
-      <li><a href="galerija.html" class="lang sr">Galerija snimaka</a><a href="galerija.html" class="lang en">Video gallery</a></li>
-      <li><a href="index.html#contact" class="lang sr">Kontakt</a><a href="index.html#contact" class="lang en">Contact</a></li>
+      <li><a href="index.html#hero">Početna</a><a href="index.html#hero" class="lang en" style="display:none;">Home</a></li>
+      <li><a href="onama.html">O nama</a><a href="onama.html" class="lang en" style="display:none;">About us</a></li>
+      <li><a href="portfolio.html">Portfolio Projekata</a><a href="portfolio.html" class="lang en" style="display:none;">Projects</a></li>
+      <li><a href="galerija.html">Galerija snimaka</a><a href="galerija.html" class="lang en" style="display:none;">Video gallery</a></li>
+      <li><a href="index.html#contact">Kontakt</a><a href="index.html#contact" class="lang en" style="display:none;">Contact</a></li>
     </ul>
     <div class="language-switcher">
-      <img id="btn-sr" src="images/sr.png" alt="SR">
-      <img id="btn-en" src="images/en.png" alt="EN">
+      <a href="javascript:void(0)" id="btn-sr">SR</a>|<a href="javascript:void(0)" id="btn-en">EN</a>
     </div>
   </nav>
 </header>
-
 <script>
   function switcher(lang) {
-    document.body.datasetLang = lang;
+    document.body.setAttribute('data-lang', lang);
     document.querySelectorAll('.lang').forEach(el => {
       el.style.display = el.classList.contains(lang) ? '' : 'none';
     });
@@ -36,51 +26,25 @@
   switcher('sr');
 </script>
 
-<main>
-  <section id="about" class="onama-section">
+<main class="main-content">
+  <section class="onama-section">
     <div class="onama-container">
       <div class="onama-text">
-        <h1 class="lang sr">O nama</h1>
-        <h1 class="lang en">About us</h1>
-
-        <p class="lang sr">
-          Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom
-          metalnih konstrukcija širom Srbije i Evrope.
-        </p>
-        <p class="lang en">
-          Weldingmont Ltd. is a company from Vranje, founded in 2017. We design and install metal structures
-          across Serbia and Europe.
-        </p>
-
+        <h1 class="lang sr">O nama</h1><h1 class="lang en" style="display:none;">About us</h1>
+        <p class="lang sr">Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
+        <p class="lang en" style="display:none;">Weldingmont Ltd. is a company from Vranje, founded in 2017. We design and install metal structures across Serbia and Europe.</p>
         <p class="lang sr"><strong>Naše usluge obuhvataju:</strong></p>
-        <p class="lang en"><strong>Our services include:</strong></p>
+        <p class="lang en" style="display:none;"><strong>Our services include:</strong></p>
         <ul>
           <li class="lang sr">Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice)</li>
-          <li class="lang en">Metal construction assembly (halls, buildings, bridges, posts, fences, stairs, canopies)</li>
+          <li class="lang en" style="display:none;">Metal construction assembly (halls, buildings, bridges, posts, fences, stairs, canopies)</li>
           <li class="lang sr">Obrada metala: sečenje, savijanje, zavarivanje</li>
-          <li class="lang en">Metal processing: cutting, bending, welding</li>
+          <li class="lang en" style="display:none;">Metal processing: cutting, bending, welding</li>
         </ul>
-
-        <p class="lang sr">
-          Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834.
-          Sertifikaciju je izvršilo renomirano telo Alcumus ISOQAR iz Mančestera.
-        </p>
-        <p class="lang en">
-          Weldingmont Ltd. has successfully implemented the ISO 9001:2015 and BS EN ISO 3834 quality management systems,
-          certified by Alcumus ISOQAR of Manchester.
-        </p>
+        <p class="lang sr">Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834. Sertifikaciju je izvršilo telo Alcumus ISOQAR.</p>
+        <p class="lang en" style="display:none;">Weldingmont Ltd. has successfully implemented ISO 9001:2015 and BS EN ISO 3834, certified by Alcumus ISOQAR.</p>
       </div>
-      <div class="onama-image">
-        <img src="images/490141437_1267455051516172_7720238688815939345_n.jpg" alt="Weldingmont team on site">
-      </div>
+      <div class="onama-image"><img src="images/onama.jpg" alt="Weldingmont on site"></div>
     </div>
   </section>
-</main>
-
-<footer>
-  <p class="lang sr">© Nikola Markovic – Sva prava zadržana</p>
-  <p class="lang en">© Nikola Markovic – All rights reserved</p>
-</footer>
-
-</body>
-</html>
+</main></body></html>

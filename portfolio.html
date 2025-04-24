@@ -1,31 +1,21 @@
-<!DOCTYPE html>
-<html lang="sr" data-lang="sr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weldingmont - Portfolio Projekata</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+<!DOCTYPE html><html lang="sr" data-lang="sr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portfolio Projekata</title><link rel="stylesheet" href="styles.css"></head><body>
 <header>
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="index.html#hero" class="lang sr">Početna</a><a href="index.html#hero" class="lang en">Home</a></li>
-      <li><a href="onama.html" class="lang sr">O nama</a><a href="onama.html" class="lang en">About us</a></li>
-      <li><a href="portfolio.html" class="lang sr">Portfolio Projekata</a><a href="portfolio.html" class="lang en">Projects</a></li>
-      <li><a href="galerija.html" class="lang sr">Galerija snimaka</a><a href="galerija.html" class="lang en">Video gallery</a></li>
-      <li><a href="index.html#contact" class="lang sr">Kontakt</a><a href="index.html#contact" class="lang en">Contact</a></li>
+      <li><a href="index.html#hero">Početna</a><a href="index.html#hero" class="lang en" style="display:none;">Home</a></li>
+      <li><a href="onama.html">O nama</a><a href="onama.html" class="lang en" style="display:none;">About us</a></li>
+      <li><a href="portfolio.html">Portfolio Projekata</a><a href="portfolio.html" class="lang en" style="display:none;">Projects</a></li>
+      <li><a href="galerija.html">Galerija snimaka</a><a href="galerija.html" class="lang en" style="display:none;">Video gallery</a></li>
+      <li><a href="index.html#contact">Kontakt</a><a href="index.html#contact" class="lang en" style="display:none;">Contact</a></li>
     </ul>
     <div class="language-switcher">
-      <img id="btn-sr" src="images/sr.png" alt="SR">
-      <img id="btn-en" src="images/en.png" alt="EN">
+      <a href="javascript:void(0)" id="btn-sr">SR</a>|<a href="javascript:void(0)" id="btn-en">EN</a>
     </div>
   </nav>
 </header>
 <script>
   function switcher(lang) {
-    document.body.datasetLang = lang;
+    document.body.setAttribute('data-lang', lang);
     document.querySelectorAll('.lang').forEach(el => {
       el.style.display = el.classList.contains(lang) ? '' : 'none';
     });
@@ -34,18 +24,4 @@
   document.getElementById('btn-en').onclick = () => switcher('en');
   switcher('sr');
 </script>
-
-
-<main>
-  <h1 class="lang sr">Portfolio Projekata</h1>
-  <h1 class="lang en">Projects</h1>
-  <div style="margin-top:20px;">
-    <!-- Embed posts -->
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02fDrpafXT7uDwF7UgydH9YzECYH2WL1bmJCo5mmA8jiko2dgHDUG5UKYsSKEfW1KTl&show_text=true&width=500" width="500" height="665" allowfullscreen></iframe>
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02bf8Cw1p5iasnHL8vRNYz7V9ua5WEepXuBoreT8hf9hDU7pzJ1Ni1Xph1GxkpJy4Pl&show_text=true&width=500" width="500" height="665" allowfullscreen></iframe>
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid0Qrv4qNhdiSCMeyg5swtAUf1Rr9FodWH9ML19KQVosxRC1RHsvnjqn2FVrCH55rbcl&show_text=true&width=500" width="500" height="562" allowfullscreen></iframe>
-  </div>
-</main>
-
-</body>
-</html>
+<main class="main-content"><h1 class="lang sr">Portfolio Projekata</h1><h1 class="lang en" style="display:none;">Projects</h1><div style="margin-top:20px;"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02fDrpafXT7uDwF7UgydH9YzECYH2WL1bmJCo5mmA8jiko2dgHDUG5UKYsSKEfW1KTl&show_text=true&width=500" width="500" height="665" allowfullscreen></iframe><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02bf8Cw1p5iasnHL8vRNYz7V9ua5WEepXuBoreT8hf9hDU7pzJ1Ni1Xph1GxkpJy4Pl&show_text=true&width=500" width="500" height="665" allowfullscreen></iframe><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid0Qrv4qNhdiSCMeyg5swtAUf1Rr9FodWH9ML19KQVosxRC1RHsvnjqn2FVrCH55rbcl&show_text=true&width=500" width="500" height="562" allowfullscreen></iframe></div></main></body></html>
