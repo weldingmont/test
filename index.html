@@ -3,20 +3,71 @@ layout: default
 title: Početna
 ---
 
+<section id="hero" style="position: relative; height: 100vh; overflow: hidden;">
+  <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 1;" 
+    src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4&controls=0&showinfo=0&modestbranding=1"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <h1 class="lang-sr" style="position: relative; z-index: 2; text-align: center; margin-top: 40vh; font-size: 3em; color: rgba(255,255,255,0.85);">Dobrodošli na Weldingmont website</h1>
+  <h1 class="lang-en" style="display:none; position: relative; z-index: 2; text-align: center; margin-top: 40vh; font-size: 3em; color: rgba(255,255,255,0.85);">Welcome to the Weldingmont website</h1>
+</section>
+
 <section id="o-nama">
-  <h2>O nama</h2>
-  <p>Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
+  <h2 class="lang-sr">O nama</h2>
+  <p class="lang-sr">
+    Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.<br><br>
+    Naše usluge obuhvataju:<br>
+    • Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)<br>
+    • Obrada metala: sečenje, savijanje, zavarivanje<br><br>
+    Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834, čime je poslovanje usklađeno sa međunarodnim standardima. Sertifikaciju je izvršilo renomirano sertifikaciono telo Alcumus ISOQAR Limited iz Mančestera.
+  </p>
+
+  <h2 class="lang-en" style="display:none;">About Us</h2>
+  <p class="lang-en" style="display:none;">
+    Weldingmont Ltd. is a company from Vranje founded in 2017. We specialize in the production and installation of metal structures across Serbia and Europe.<br><br>
+    Our services include:<br>
+    • Metal structures and assembly (halls, buildings, bridges, piles, fences, staircases, canopies, etc.)<br>
+    • Metal processing: cutting, bending, welding<br><br>
+    Weldingmont has successfully implemented a quality management system in accordance with ISO 9001:2015 and BS EN ISO 3834 standards. The certification was conducted by Alcumus ISOQAR Limited, Manchester.
+  </p>
 </section>
 
 <section id="portfolio">
-  <h2>Portfolio projekata</h2>
-  <div class="posts-preview">
-    {% for post in site.posts limit:3 %}
-      <article>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt }}</p>
-      </article>
+  <h2 class="lang-sr">Portfolio projekata</h2>
+  <h2 class="lang-en" style="display:none;">Project Portfolio</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    {% for post in site.posts limit:4 %}
+    <div>
+      <h3>{{ post.title }}</h3>
+      {{ post.content }}
+    </div>
     {% endfor %}
   </div>
-  <a href="/blog.html">Kliknite ovde da vidite sve objave</a>
+  <p><a href="blog.html">Kliknite ovde da vidite sve objave</a></p>
+</section>
+
+<section id="kontakt">
+  <h2 class="lang-sr">Kontaktirajte nas</h2>
+  <h2 class="lang-en" style="display:none;">Contact Us</h2>
+  <p>Vlasnik: Sladjan Marković</p>
+  <p>Email: weldingmontvr@gmail.com</p>
+  <p>Telefon: +381 65 826 2010</p>
+  <a href="https://maps.app.goo.gl/LvHd1m7Py3HwXy4d6" target="_blank">📍 Pogledaj lokaciju</a>
+  <div style="margin-top: 10px;">
+    <a href="Weldingmont_Brosura_SR.pdf" class="lang-sr" download title="Preuzmi brošuru">📎 Preuzmi brošuru (SR)</a>
+    <a href="Weldingmont_Brochure_EN.pdf" class="lang-en" style="display:none;" download title="Download brochure">📎 Download brochure (EN)</a>
+  </div>
+
+  <div class="form-block" style="background-color: #2a2a2a; padding: 20px; margin-top: 20px;">
+    <h3 class="lang-sr">📬 Formular za kontakt</h3>
+    <h3 class="lang-en" style="display:none;">📬 Contact Form</h3>
+    <form action="https://formspree.io/f/xldbejpd" method="POST">
+      <label class="lang-sr">Vaš email:<br><input type="email" name="email" required></label>
+      <label class="lang-en" style="display:none;">Your email:<br><input type="email" name="email" required></label>
+      <label class="lang-sr">Vaša poruka:<br><textarea name="message" required></textarea></label>
+      <label class="lang-en" style="display:none;">Your message:<br><textarea name="message" required></textarea></label>
+      <br>
+      <button type="submit" class="lang-sr">Pošalji</button>
+      <button type="submit" class="lang-en" style="display:none;">Send</button>
+    </form>
+  </div>
 </section>

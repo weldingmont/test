@@ -2,33 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Galerija snimaka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija Snimaka</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        iframe {
-            width: 100%;
-            height: 250px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1 style="text-align: center;">Galerija snimaka</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galerija.html">Galerija snimaka</a></li>
+                <li>
+                    <a href="#" id="language-switch" onclick="switchLanguage()">SR/EN</a>
+                </li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <div class="video-grid">
-            <iframe src="https://www.youtube.com/embed/PVL1ls59Us4" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/dEMYrjXp0Jw" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/RJxZ5XMDtuU" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/14UBO7IYtBs" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <h1>Galerija Snimaka</h1>
+        <p>Ovde će biti prikazani video snimci i galerije...</p>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Weldingmont</p>
+    </footer>
+
+    <script>
+        function switchLanguage() {
+            const currentLang = document.documentElement.lang;
+            if (currentLang === "en") {
+                document.documentElement.lang = "sr";
+            } else {
+                document.documentElement.lang = "en";
+            }
+        }
+    </script>
 </body>
 </html>

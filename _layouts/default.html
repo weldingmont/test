@@ -1,29 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="sr">
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/index.html#o-nama">O nama</a></li>
-          <li><a href="/index.html#portfolio">Portfolio</a></li>
-          <li><a href="/galerija.html">Galerija snimaka</a></li>
-          <li><a href="/index.html#kontakt">Kontakt</a></li>
-          <li class="lang-switcher">RS / EN</li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      {{ content }}
-    </main>
-    <footer>
-      <p>&copy; 2025 Weldingmont | Sva prava zadržana</p>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #f2f2f2;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #1c1c1c;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: #f2f2f2;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #00bcd4;
+    }
+    iframe {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <a href="#hero">Početna</a>
+    <a href="#o-nama">O nama</a>
+    <a href="#portfolio">Portfolio projekata</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+  <div class="lang-switch">
+    <button onclick="toggleLang('sr')">🇷🇸</button>
+    <button onclick="toggleLang('en')">🇬🇧</button>
+  </div>
+</nav>
+
+{{ content }}
+
+<script>
+function toggleLang(lang) {
+  document.querySelectorAll('[class^="lang-"]').forEach(el => {
+    el.style.display = 'none';
+  });
+  document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+    el.style.display = 'block';
+  });
+}
+toggleLang('sr');
+</script>
+
+</body>
 </html>

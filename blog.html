@@ -3,13 +3,9 @@ layout: default
 title: Blog
 ---
 
-<h1>Naši radovi</h1>
-<p>Ukupno postova: {{ site.posts | size }}</p>
-<div class="posts-preview">
+<h1>Blog objave</h1>
+<ul>
   {% for post in site.posts %}
-    <article>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt }}</p>
-    </article>
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
-</div>
+</ul>
