@@ -4,52 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="{{ '/test/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
 </head>
 <body data-lang="sr">
 
   <header>
     <nav class="navbar">
       <ul class="nav-links">
-        <li>
-          <a href="#hero" class="lang sr">Početna</a>
-          <a href="#hero" class="lang en">Home</a>
-        </li>
-        <li>
-          <a href="#about" class="lang sr">O nama</a>
-          <a href="#about" class="lang en">About us</a>
-        </li>
-        <li>
-          <a href="#portfolio" class="lang sr">Portfolio projekata</a>
-          <a href="#portfolio" class="lang en">Projects</a>
-        </li>
-        <li>
-          <a href="galerija.html" class="lang sr">Galerija snimaka</a>
-          <a href="galerija.html" class="lang en">Video gallery</a>
-        </li>
-        <li>
-          <a href="#contact" class="lang sr">Kontakt</a>
-          <a href="#contact" class="lang en">Contact</a>
-        </li>
+        <li><a href="{{ '/' | relative_url }}#hero" class="lang sr">Početna</a><a href="{{ '/' | relative_url }}#hero" class="lang en">Home</a></li>
+        <li><a href="{{ '/onama.html' | relative_url }}" class="lang sr">O nama</a><a href="{{ '/onama.html' | relative_url }}" class="lang en">About us</a></li>
+        <li><a href="{{ '/portfolio.html' | relative_url }}" class="lang sr">Portfolio projekata</a><a href="{{ '/portfolio.html' | relative_url }}" class="lang en">Projects</a></li>
+        <li><a href="{{ '/galerija.html' | relative_url }}" class="lang sr">Galerija snimaka</a><a href="{{ '/galerija.html' | relative_url }}" class="lang en">Video gallery</a></li>
+        <li><a href="{{ '/' | relative_url }}#contact" class="lang sr">Kontakt</a><a href="{{ '/' | relative_url }}#contact" class="lang en">Contact</a></li>
       </ul>
       <div class="language-switcher">
-        <img id="btn-sr" src="images/sr.png" alt="SR">
-        <img id="btn-en" src="images/en.png" alt="EN">
+        <a id="btn-sr" href="javascript:void(0)">SR</a> |
+        <a id="btn-en" href="javascript:void(0)">EN</a>
       </div>
     </nav>
   </header>
-
-  <main>
-    {{ content }}
-  </main>
-
-  <footer>
-    <a href="https://www.facebook.com/weldingmont" target="_blank">
-      <img src="images/facebook-icon.png" alt="Facebook">
-    </a>
-    <p class="lang sr">© Nikola Markovic – Sva prava zadržana</p>
-    <p class="lang en">© Nikola Markovic – All rights reserved</p>
-  </footer>
 
   <script>
     function switcher(lang) {
@@ -60,8 +33,19 @@
     }
     document.getElementById('btn-sr').onclick = () => switcher('sr');
     document.getElementById('btn-en').onclick = () => switcher('en');
+    // Default to Serbian
     switcher('sr');
   </script>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a>
+    <p class="lang sr">© Nikola Markovic – Sva prava zadržana</p>
+    <p class="lang en">© Nikola Markovic – All rights reserved</p>
+  </footer>
 
 </body>
 </html>

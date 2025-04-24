@@ -1,27 +1,27 @@
-/* Add at end of styles.css */
-
-/* O nama two-column layout */
-.onama-section {
-  padding: 40px 20px;
-}
-.onama-container {
+/* Language switcher styles */
+.language-switcher {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
-.onama-text {
-  flex: 1 1 300px;
+/* Remove image rules, ensure links appear correctly */
+.language-switcher a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 5px;
 }
-.onama-image {
-  flex: 1 1 300px;
-  text-align: center;
+.language-switcher a:hover {
+  text-decoration: underline;
 }
-.onama-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+
+/* Footer link style */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+footer a:hover {
+  text-decoration: underline;
 }
