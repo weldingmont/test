@@ -28,7 +28,7 @@ header {
 }
 .language-switcher {
   margin-left: auto;
-  padding-right: 20px; /* extra space around toggler */
+  padding-right: 20px;
 }
 .language-switcher a {
   color: #fff;
@@ -68,7 +68,7 @@ main {
   font-size: 4rem;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
-/* Contact Section on Home */
+/* Contact on Home */
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -132,7 +132,7 @@ main {
 }
 .portfolio-section .blog-posts iframe {
   width: 100%;
-  height: 500px; /* increased height */
+  height: 600px;
   aspect-ratio: 16/9;
 }
 /* Galerija */

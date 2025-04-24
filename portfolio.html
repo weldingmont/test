@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="sr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio Projekata</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Portfolio Projekata</title>
+<link rel="stylesheet" href="styles.css"></head><body>
 <header>
   <nav class="navbar">
     <div class="nav-links">
@@ -14,12 +9,12 @@
       <a href="index.html" class="lang en">Home</a>
       <a href="onama.html" class="lang sr">O nama</a>
       <a href="onama.html" class="lang en">About us</a>
-      <a href="portfolio.html" class="lang sr">Portfolio</a>
+      <a href="portfolio.html" class="lang sr">Portfolio Projekata</a>
       <a href="portfolio.html" class="lang en">Projects</a>
-      <a href="galerija.html" class="lang sr">Galerija</a>
+      <a href="galerija.html" class="lang sr">Galerija snimaka</a>
       <a href="galerija.html" class="lang en">Video gallery</a>
-      <a href="kontakt.html" class="lang sr">Kontakt</a>
-      <a href="kontakt.html" class="lang en">Contact</a>
+      <a href="index.html#contact" class="lang sr">Kontakt</a>
+      <a href="index.html#contact" class="lang en">Contact</a>
     </div>
     <div class="language-switcher">
       <a href="javascript:void(0)" id="btn-sr">SR</a> |
@@ -33,9 +28,9 @@
     <h1 class="lang sr">Portfolio Projekata</h1><h1 class="lang en">Projects</h1>
     <p class="lang sr">Ukupan broj objava: 3</p><p class="lang en">Total posts: 3</p>
     <div class="blog-posts">
-      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02fDrpafXT7uDwF7UgydH9YzECYH2WL1bmJCo5mmA8jiko2dgHDUG5UKYsSKEfW1KTl" frameborder="0" style="width:100%; height:600px;" allowfullscreen></iframe>
-      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02bf8Cw1p5iasnHL8vRNYz7V9ua5WEepXuBoreT8hf9hDU7pzJ1Ni1Xph1GxkpJy4Pl" frameborder="0" style="width:100%; height:600px;" allowfullscreen></iframe>
-      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid0Qrv4qNhdiSCMeyg5swtAUf1Rr9FodWH9ML19KQVosxRC1RHsvnjqn2FVrCH55rbcl" frameborder="0" style="width:100%; height:600px;" allowfullscreen></iframe>
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02fDrpafXT7uDwF7UgydH9YzECYH2WL1bmJCo5mmA8jiko2dgHDUG5UKYsSKEfW1KTl" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02bf8Cw1p5iasnHL8vRNYz7V9ua5WEepXuBoreT8hf9hDU7pzJ1Ni1Xph1GxkpJy4Pl" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid0Qrv4qNhdiSCMeyg5swtAUf1Rr9FodWH9ML19KQVosxRC1RHsvnjqn2FVrCH55rbcl" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 </main>
@@ -43,16 +38,20 @@
   <p class="lang sr">© Nikola Markovic – Sva prava zadržana</p>
   <p class="lang en">© Nikola Markovic – All rights reserved</p>
 </footer>
+
 <script>
-function switcher(lang) {
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('site-lang') || 'sr';
+  switchLang(saved);
+  document.getElementById('btn-sr').onclick = () => switchLang('sr');
+  document.getElementById('btn-en').onclick = () => switchLang('en');
+});
+function switchLang(lang) {
+  localStorage.setItem('site-lang', lang);
   document.querySelectorAll('.lang').forEach(el => {
     el.style.display = el.classList.contains(lang) ? '' : 'none';
   });
 }
-document.getElementById('btn-sr').onclick = () => switcher('sr');
-document.getElementById('btn-en').onclick = () => switcher('en');
-// default to SR
-switcher('sr');
 </script>
-</body>
-</html>
+
+</body></html>
