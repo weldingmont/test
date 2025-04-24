@@ -1,0 +1,25 @@
+*** Patch for persistent language toggle and Kontakt link ***
+
+1) Replace old <script> in all HTML files with:
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('site-lang') || 'sr';
+  switchLang(saved);
+  document.getElementById('btn-sr').onclick = () => switchLang('sr');
+  document.getElementById('btn-en').onclick = () => switchLang('en');
+});
+function switchLang(lang) {
+  localStorage.setItem('site-lang', lang);
+  document.querySelectorAll('.lang').forEach(el => {
+    el.style.display = el.classList.contains(lang) ? '' : 'none';
+  });
+}
+</script>
+
+2) In the <nav> of all HTML files, update Kontakt link:
+- Change:
+    <a href="kontakt.html" class="lang sr">Kontakt</a>
+    <a href="kontakt.html" class="lang en">Contact</a>
+- To:
+    <a href="index.html#contact" class="lang sr">Kontakt</a>
+    <a href="index.html#contact" class="lang en">Contact</a>
