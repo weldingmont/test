@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="sr" data-lang="sr">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weldingmont - Home</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
+<html lang="sr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weldingmont - Home</title><link rel="stylesheet" href="styles.css"></head>
+<body><header>
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="index.html#hero">Početna</a><a href="index.html#hero" class="lang en" style="display:none;">Home</a></li>
-      <li><a href="onama.html">O nama</a><a href="onama.html" class="lang en" style="display:none;">About us</a></li>
-      <li><a href="portfolio.html">Portfolio Projekata</a><a href="portfolio.html" class="lang en" style="display:none;">Projects</a></li>
-      <li><a href="galerija.html">Galerija snimaka</a><a href="galerija.html" class="lang en" style="display:none;">Video gallery</a></li>
-      <li><a href="index.html#contact">Kontakt</a><a href="index.html#contact" class="lang en" style="display:none;">Contact</a></li>
+      <li><a href="index.html#hero" class="lang sr">Početna</a><a href="index.html#hero" class="lang en">Home</a></li>
+      <li><a href="onama.html" class="lang sr">O nama</a><a href="onama.html" class="lang en">About us</a></li>
+      <li><a href="portfolio.html" class="lang sr">Portfolio Projekata</a><a href="portfolio.html" class="lang en">Projects</a></li>
+      <li><a href="galerija.html" class="lang sr">Galerija snimaka</a><a href="galerija.html" class="lang en">Video gallery</a></li>
+      <li><a href="index.html#contact" class="lang sr">Kontakt</a><a href="index.html#contact" class="lang en">Contact</a></li>
     </ul>
     <div class="language-switcher">
       <a href="javascript:void(0)" id="btn-sr">SR</a>|<a href="javascript:void(0)" id="btn-en">EN</a>
@@ -20,39 +16,30 @@
   </nav>
 </header>
 <script>
-  function switcher(lang) {
-    document.body.setAttribute('data-lang', lang);
-    document.querySelectorAll('.lang').forEach(el => {
-      el.style.display = el.classList.contains(lang) ? '' : 'none';
-    });
-  }
-  document.getElementById('btn-sr').onclick = () => switcher('sr');
-  document.getElementById('btn-en').onclick = () => switcher('en');
-  switcher('sr');
+function switcher(lang) {
+  document.querySelectorAll('.lang').forEach(el => {
+    el.style.display = el.classList.contains(lang) ? '' : 'none';
+  });
+}
+document.getElementById('btn-sr').onclick = () => switcher('sr');
+document.getElementById('btn-en').onclick = () => switcher('en');
+// default to sr
+switcher('sr');
 </script>
-
 <main class="main-content">
-  <section id="hero" class="hero">
-    <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    <div class="hero-content">
-      <h1 class="lang sr">Dobrodošli na Weldingmont</h1>
-      <h1 class="lang en" style="display:none;">Welcome to Weldingmont</h1>
-    </div>
+  <section id="hero" class="hero"><iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div class="hero-content"><h1 class="lang sr">Dobrodošli na Weldingmont</h1><h1 class="lang en">Welcome to Weldingmont</h1></div>
   </section>
   <section id="contact" class="contact-section">
     <div class="contact-info">
-      <h2 class="lang sr">Kontaktirajte nas</h2><h2 class="lang en" style="display:none;">Contact Us</h2>
-      <p><strong class="lang sr">Vlasnik:</strong><strong class="lang en" style="display:none;">Owner:</strong> Sladjan Marković</p>
+      <h2 class="lang sr">Kontaktirajte nas</h2><h2 class="lang en">Contact Us</h2>
+      <p><strong class="lang sr">Vlasnik:</strong><strong class="lang en">Owner:</strong> Sladjan Marković</p>
       <p><strong>Email:</strong> weldingmontvr@gmail.com</p>
-      <p><strong class="lang sr">Telefon:</strong><strong class="lang en" style="display:none;">Phone:</strong> +381 65 826 2010</p>
+      <p><strong class="lang sr">Telefon:</strong><strong class="lang en">Phone:</strong> +381 65 826 2010</p>
       <p class="lang sr">📎 <a href="Weldingmont_Brosura_SR_bolje.pdf" download>Preuzmi brošuru (SR)</a></p>
-      <p class="lang en" style="display:none;">📎 <a href="Weldingmont_Brochure_EN_better.pdf" download>Download brochure (EN)</a></p>
-      <p><a href="https://www.facebook.com/weldingmont" target="_blank" class="lang sr">Facebook</a><a href="https://www.facebook.com/weldingmont" target="_blank" class="lang en" style="display:none;">Facebook</a></p>
+      <p class="lang en">📎 <a href="Weldingmont_Brochure_EN_better.pdf" download>Download brochure (EN)</a></p>
+      <p><a href="https://www.facebook.com/weldingmont" target="_blank" class="lang sr">Facebook</a><a href="https://www.facebook.com/weldingmont" target="_blank" class="lang en">Facebook</a></p>
     </div>
-    <div class="contact-map">
-      <iframe src="https://maps.google.com/maps?q=42.5511,21.8963&z=15&output=embed" allowfullscreen></iframe>
-    </div>
-  </section>  
-</main>
-<footer><p class="lang sr">© Nikola Markovic – Sva prava zadržana</p><p class="lang en" style="display:none;">© Nikola Markovic – All rights reserved</p></footer>
-</body></html>
+    <div class="contact-map"><iframe src="https://www.google.com/maps/place/Welding+Mont+doo+Preduzece+za+izradu+celicne+konstrukcije/@42.528138,21.9046063,17z/data=!3m1!4b1!4m6!3m5!1s0x13551f32a8bc6211:0x1f5e759f8f6c5173!8m2!3d42.5281341!4d21.9071812!16s%2Fg%2F11f765nbn8?entry=ttu" allowfullscreen></iframe></div>
+  </section>
+</main><footer><p class="lang sr">© Nikola Markovic – Sva prava zadržana</p><p class="lang en">© Nikola Markovic – All rights reserved</p></footer></body></html>

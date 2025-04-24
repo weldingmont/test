@@ -1,12 +1,14 @@
-<!DOCTYPE html><html lang="sr" data-lang="sr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kontakt</title><link rel="stylesheet" href="styles.css"></head><body>
-<header>
+<!DOCTYPE html>
+<html lang="sr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kontakt</title><link rel="stylesheet" href="styles.css"></head>
+<body><header>
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="index.html#hero">Početna</a><a href="index.html#hero" class="lang en" style="display:none;">Home</a></li>
-      <li><a href="onama.html">O nama</a><a href="onama.html" class="lang en" style="display:none;">About us</a></li>
-      <li><a href="portfolio.html">Portfolio Projekata</a><a href="portfolio.html" class="lang en" style="display:none;">Projects</a></li>
-      <li><a href="galerija.html">Galerija snimaka</a><a href="galerija.html" class="lang en" style="display:none;">Video gallery</a></li>
-      <li><a href="index.html#contact">Kontakt</a><a href="index.html#contact" class="lang en" style="display:none;">Contact</a></li>
+      <li><a href="index.html#hero" class="lang sr">Početna</a><a href="index.html#hero" class="lang en">Home</a></li>
+      <li><a href="onama.html" class="lang sr">O nama</a><a href="onama.html" class="lang en">About us</a></li>
+      <li><a href="portfolio.html" class="lang sr">Portfolio Projekata</a><a href="portfolio.html" class="lang en">Projects</a></li>
+      <li><a href="galerija.html" class="lang sr">Galerija snimaka</a><a href="galerija.html" class="lang en">Video gallery</a></li>
+      <li><a href="index.html#contact" class="lang sr">Kontakt</a><a href="index.html#contact" class="lang en">Contact</a></li>
     </ul>
     <div class="language-switcher">
       <a href="javascript:void(0)" id="btn-sr">SR</a>|<a href="javascript:void(0)" id="btn-en">EN</a>
@@ -14,14 +16,26 @@
   </nav>
 </header>
 <script>
-  function switcher(lang) {
-    document.body.setAttribute('data-lang', lang);
-    document.querySelectorAll('.lang').forEach(el => {
-      el.style.display = el.classList.contains(lang) ? '' : 'none';
-    });
-  }
-  document.getElementById('btn-sr').onclick = () => switcher('sr');
-  document.getElementById('btn-en').onclick = () => switcher('en');
-  switcher('sr');
+function switcher(lang) {
+  document.querySelectorAll('.lang').forEach(el => {
+    el.style.display = el.classList.contains(lang) ? '' : 'none';
+  });
+}
+document.getElementById('btn-sr').onclick = () => switcher('sr');
+document.getElementById('btn-en').onclick = () => switcher('en');
+// default to sr
+switcher('sr');
 </script>
-<main class="main-content"><h1 class="lang sr">Kontakt</h1><h1 class="lang en" style="display:none;">Contact</h1><div class="contact-section"><div class="contact-info"><p class="lang sr"><strong>Vlasnik:</strong> Sladjan Marković</p><p class="lang en" style="display:none;"><strong>Owner:</strong> Sladjan Markovic</p><p><strong>Email:</strong> weldingmontvr@gmail.com</p><p class="lang sr"><strong>Telefon:</strong> +381 65 826 2010</p><p class="lang en" style="display:none;"><strong>Phone:</strong> +381 65 826 2010</p><p class="lang sr">📎 <a href="Weldingmont_Brosura_SR_bolje.pdf" download>Preuzmi brošuru (SR)</a></p><p class="lang en" style="display:none;">📎 <a href="Weldingmont_Brochure_EN_better.pdf" download>Download brochure (EN)</a></p></div><div class="contact-map"><iframe src="https://maps.google.com/maps?q=42.5511,21.8963&z=15&output=embed" allowfullscreen></iframe></div></div></main></body></html>
+<main class="main-content">
+  <section class="contact-section">
+    <h1 class="lang sr">Kontakt</h1><h1 class="lang en">Contact</h1>
+    <div class="contact-info">
+      <p class="lang sr"><strong>Vlasnik:</strong> Sladjan Marković</p><p class="lang en"><strong>Owner:</strong> Sladjan Markovic</p>
+      <p><strong>Email:</strong> weldingmontvr@gmail.com</p>
+      <p class="lang sr"><strong>Telefon:</strong> +381 65 826 2010</p><p class="lang en"><strong>Phone:</strong> +381 65 826 2010</p>
+      <p class="lang sr">📎 <a href="Weldingmont_Brosura_SR_bolje.pdf" download>Preuzmi brošuru (SR)</a></p><p class="lang en">📎 <a href="Weldingmont_Brochure_EN_better.pdf" download>Download brochure (EN)</a></p>
+      <p><a href="https://www.facebook.com/weldingmont" target="_blank" class="lang sr">Facebook</a><a href="https://www.facebook.com/weldingmont" target="_blank" class="lang en">Facebook</a></p>
+    </div>
+    <div class="contact-map"><iframe src="https://www.google.com/maps/place/Welding+Mont+doo+Preduzece+za+izradu+celicne+konstrukcije/@42.528138,21.9046063,17z/data=!3m1!4b1!4m6!3m5!1s0x13551f32a8bc6211:0x1f5e759f8f6c5173!8m...
+  </section>
+</main></body></html>
