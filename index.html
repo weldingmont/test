@@ -1,67 +1,24 @@
----
-layout: default
-title: Početna
----
-
-# Dobrodošli na Weldingmont website
-
-# Welcome to the Weldingmont website
-
-## O nama
-
-Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.  
-
-Naše usluge obuhvataju:  
-• Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)  
-• Obrada metala: sečenje, savijanje, zavarivanje
-
-Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834, čime je poslovanje usklađeno sa međunarodnim standardima. Sertifikaciju je izvršilo renomirano sertifikaciono telo Alcumus ISOQAR Limited iz Mančestera.
-
-## About Us
-
-Weldingmont Ltd. is a company from Vranje founded in 2017. We specialize in the production and installation of metal structures across Serbia and Europe.  
-
-Our services include:  
-• Metal structures and assembly (halls, buildings, bridges, piles, fences, staircases, canopies, etc.)  
-• Metal processing: cutting, bending, welding
-
-Weldingmont has successfully implemented a quality management system in accordance with ISO 9001:2015 and BS EN ISO 3834 standards. The certification was conducted by Alcumus ISOQAR Limited, Manchester.
-
-## Portfolio projekata
-
-## Project Portfolio
-
-{% for post in site.posts limit:4 %} 
-
-### {{ post.title }}
-
-{{ post.content }} 
-
-{% endfor %} 
-
-[Kliknite ovde da vidite sve objave]({{ '/test/blog.html' | relative_url }})
-
-## Kontaktirajte nas
-
-## Contact Us
-
-Vlasnik: Sladjan Marković
-
-Email: weldingmontvr@gmail.com
-
-Telefon: +381 65 826 2010
-
-[ Pogledaj lokaciju ](https://maps.app.goo.gl/uJg1H5uoKwakYtp78)
-
-[ Preuzmi brošuru (SR) ](/test/Weldingmont_Brosura_SR_bolje.pdf)
-
-[ Download brochure (EN) ](/test/Weldingmont_Brochure_EN_better.pdf)
-
-### Formular za kontakt
-
-Vaš email:  
-Your email:  
-Vaša poruka:  
-Your message:  
-
-Pošalji Send
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Weldingmont - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <ul>
+    <li><a href="index.html" target="_blank">Home</a></li>
+    <li><a href="onama.html" target="_blank">O nama</a></li>
+    <li><a href="portfolio.html" target="_blank">Portfolio Projekata</a></li>
+    <li><a href="galerija.html" target="_blank">Galerija snimaka</a></li>
+    <li><a href="kontakt.html" target="_blank">Kontakt</a></li>
+  </ul>
+</header>
+<main>
+  <h1>Dobrodošli na Weldingmont</h1>
+  <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="width:100%; height:60vh;"></iframe>
+</main>
+</body>
+</html>
