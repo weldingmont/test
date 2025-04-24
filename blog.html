@@ -1,17 +1,24 @@
----
-layout: default
-title: Blog
----
-
-<h1>Naši radovi</h1>
-<p>Ukupno postova: {{ site.posts | size }}</p>
-
-<div class="posts-preview">
-  {% for post in site.posts %}
-    <article>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p><em>{{ post.date | date: "%d.%m.%Y" }}</em></p>
-      <p>{{ post.excerpt }}</p>
-    </article>
-  {% endfor %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - Weldingmont</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Blog objave</h1>
+    </header>
+    <main>
+        <section>
+            <ul>
+                {% for post in site.posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%d.%m.%Y" }}
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
