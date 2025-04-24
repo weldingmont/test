@@ -6,14 +6,19 @@ body {
   background: #1e1e1e;
   color: #f0f0f0;
 }
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 1rem;
+}
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 1.5rem;
-  background: #333;
-  padding: 1rem;
   margin: 0;
+  padding: 0;
 }
 header nav ul li a {
   color: white;
@@ -26,10 +31,9 @@ header nav ul li a {
   overflow: hidden;
 }
 .video-background iframe {
-  position: absolute;
-  top: 0; left: 0;
   width: 100%;
   height: 100%;
+  position: absolute;
   pointer-events: none;
 }
 .hero-text {
@@ -37,19 +41,20 @@ header nav ul li a {
   top: 20%;
   width: 100%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: rgba(255,255,255,0.8);
 }
 .posts-preview {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  margin-bottom: 2rem;
+  padding: 1rem;
 }
 .video-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+  padding: 1rem;
 }
 footer {
   background: #333;

@@ -10,23 +10,30 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="nav-left">
           <li><a href="/index.html">Početna</a></li>
           <li><a href="/blog.html">Blog</a></li>
           <li><a href="/galerija.html">Galerija</a></li>
           <li><a href="/#kontakt">Kontakt</a></li>
         </ul>
+        <ul class="nav-right">
+          <li><a href="#" onclick="switchLanguage()">SR / EN</a></li>
+        </ul>
       </nav>
     </header>
-
-    <main class="post-content">
+    <main>
       <h1>{{ page.title }}</h1>
       <p><em>{{ page.date | date: "%d.%m.%Y" }}</em></p>
       {{ content }}
     </main>
-
     <footer>
       <p>&copy; 2025 Weldingmont | <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a></p>
     </footer>
+    <script>
+      function switchLanguage() {
+        const lang = document.documentElement.lang;
+        document.documentElement.lang = lang === 'sr' ? 'en' : 'sr';
+      }
+    </script>
   </body>
 </html>
