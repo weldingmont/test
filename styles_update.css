@@ -1,0 +1,10 @@
+/* Portfolio grid */
+.portfolio-section .blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.post-content iframe {
+  width: 100%;
+  height: auto;
+}

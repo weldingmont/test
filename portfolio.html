@@ -1,36 +1,26 @@
-<!DOCTYPE html>
-<html lang="sr">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portfolio Projekata</title><link rel="stylesheet" href="styles.css"></head>
-<body><header>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="index.html#hero" class="lang sr">Početna</a><a href="index.html#hero" class="lang en">Home</a></li>
-      <li><a href="onama.html" class="lang sr">O nama</a><a href="onama.html" class="lang en">About us</a></li>
-      <li><a href="portfolio.html" class="lang sr">Portfolio Projekata</a><a href="portfolio.html" class="lang en">Projects</a></li>
-      <li><a href="galerija.html" class="lang sr">Galerija snimaka</a><a href="galerija.html" class="lang en">Video gallery</a></li>
-      <li><a href="index.html#contact" class="lang sr">Kontakt</a><a href="index.html#contact" class="lang en">Contact</a></li>
-    </ul>
-    <div class="language-switcher">
-      <a href="javascript:void(0)" id="btn-sr">SR</a>|<a href="javascript:void(0)" id="btn-en">EN</a>
-    </div>
-  </nav>
-</header>
-<script>
-function switcher(lang) {
-  document.querySelectorAll('.lang').forEach(el => {
-    el.style.display = el.classList.contains(lang) ? '' : 'none';
-  });
-}
-document.getElementById('btn-sr').onclick = () => switcher('sr');
-document.getElementById('btn-en').onclick = () => switcher('en');
-// default to sr
-switcher('sr');
-</script>
-<main class="main-content">
-  <section class="portfolio-section">
-    <h1 class="lang sr">Portfolio Projekata</h1><h1 class="lang en">Projects</h1>
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02fDrpafXT7uDwF7UgydH9YzECYH2WL1bmJCo5mmA8jiko2dgHDUG5UKYsSKEfW1KTl&show_text=true&width=500" width="500" height="665" allowfullscreen></iframe>
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid02bf8Cw1p5iasnHL8vRNYz7V9ua5WEepXuBoreT8hf9hDU7pzJ1Ni1Xph1GxkpJy4Pl&show_text=true&width=500" width="500" height="665" allowfullscreen></iframe>
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fweldingmont%2Fposts%2Fpfbid0Qrv4qNhdiSCMeyg5swtAUf1Rr9FodWH9ML19KQVosxRC1RHsvnjqn2FVrCH55rbcl&show_text=true&width=500" width="500" height="562" allowfullscreen></iframe>
-  </section>
-</main></body></html>
+---
+layout: default
+title: Portfolio Projekata
+---
+
+<section id="portfolio" class="portfolio-section">
+  <h1>
+    <span class="lang sr">Portfolio Projekata</span>
+    <span class="lang en">Projects</span>
+  </h1>
+  <p>
+    <span class="lang sr">Ukupan broj objava: {{ site.posts | size }}</span>
+    <span class="lang en">Total posts: {{ site.posts | size }}</span>
+  </p>
+  <div class="blog-posts">
+    {% for post in site.posts %}
+      <article class="blog-post">
+        {% if post.image %}
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        {% endif %}
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <div class="post-content">{{ post.content }}</div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
