@@ -1,39 +1,8 @@
-
-<!DOCTYPE html>
-<html lang="sr">
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul class="nav-left">
-          <li><a href="/index.html">Početna</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/galerija.html">Galerija</a></li>
-          <li><a href="/#kontakt">Kontakt</a></li>
-        </ul>
-        <ul class="nav-right">
-          <li><a href="#" onclick="switchLanguage()">SR / EN</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>{{ page.title }}</h1>
-      <p><em>{{ page.date | date: "%d.%m.%Y" }}</em></p>
-      {{ content }}
-    </main>
-    <footer>
-      <p>&copy; 2025 Weldingmont | <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a></p>
-    </footer>
-    <script>
-      function switchLanguage() {
-        const lang = document.documentElement.lang;
-        document.documentElement.lang = lang === 'sr' ? 'en' : 'sr';
-      }
-    </script>
-  </body>
-</html>
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  <p><em>{{ page.date | date: "%d.%m.%Y" }}</em></p>
+  {{ content }}
+</article>

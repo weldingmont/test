@@ -3,22 +3,11 @@ layout: default
 title: Početna
 ---
 
-<section class="video-background">
-  <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4"
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  <div class="hero-text">Dobrodošli na Weldingmont website</div>
+<section>
+  <h2>Dobrodošli na Weldingmont</h2>
 </section>
 
-<section id="o-nama">
-  <h2>O nama</h2>
-  <p>Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
-  <p>Naše usluge obuhvataju:<br>
-  • Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)<br>
-  • Obrada metala: sečenje, savijanje, zavarivanje</p>
-  <p>Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834, čime je poslovanje usklađeno sa međunarodnim standardima. Sertifikaciju je izvršilo renomirano sertifikaciono telo Alcumus ISOQAR Limited iz Mančestera.</p>
-</section>
-
-<section id="portfolio">
+<section>
   <h2>Portfolio projekata</h2>
   <div class="posts-preview">
     {% for post in site.posts limit:3 %}
@@ -29,26 +18,4 @@ title: Početna
     {% endfor %}
   </div>
   <a href="/blog.html">Kliknite ovde da vidite sve objave</a>
-</section>
-
-<section id="galerija">
-  <h2>Galerija snimaka</h2>
-  <div class="video-gallery">
-    <iframe src="https://www.youtube.com/embed/dEMYrjXp0Jw" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/RJxZ5XMDtuU" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/14UBO7IYtBs" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/RHFLi0d3Gug" allowfullscreen></iframe>
-  </div>
-</section>
-
-<section id="kontakt">
-  <h2>Kontaktirajte nas</h2>
-  <p>Vlasnik: Sladjan Markovic</p>
-  <p>Email: weldingmontvr@gmail.com</p>
-  <p>Telefon: +381 65 826 2010</p>
-  <form action="https://formspree.io/f/xldbejpd" method="POST">
-    <label>Email:<br><input type="email" name="email" required></label><br><br>
-    <label>Poruka:<br><textarea name="message" required></textarea></label><br><br>
-    <button type="submit">Pošalji</button>
-  </form>
 </section>
