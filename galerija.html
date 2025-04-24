@@ -1,42 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerija Snimaka</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerija snimaka - Weldingmont</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galerija.html">Galerija snimaka</a></li>
-                <li>
-                    <a href="#" id="language-switch" onclick="switchLanguage()">SR/EN</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Galerija Snimaka</h1>
-        <p>Ovde će biti prikazani video snimci i galerije...</p>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Weldingmont</p>
-    </footer>
-
-    <script>
-        function switchLanguage() {
-            const currentLang = document.documentElement.lang;
-            if (currentLang === "en") {
-                document.documentElement.lang = "sr";
-            } else {
-                document.documentElement.lang = "en";
-            }
-        }
-    </script>
+  <!-- Include header -->
+  <main>
+    <section id="gallery">
+      <h2>Galerija snimaka</h2>
+      <div class="video-gallery">
+        <iframe src="https://www.youtube.com/embed/RJxZ5XMDtuU" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dEMYrjXp0Jw" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/14UBO7IYtBs" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/9Zsy0NQ90m8" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/RHFLi0d3Gug" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/5QwkbQ_Ouys" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+  <!-- Include footer -->
 </body>
 </html>

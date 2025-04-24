@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Projekata - Weldingmont</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Include header -->
+  <main>
+    <section id="latest-posts">
+      <h2>Portfolio Projekata</h2>
+      <div class="blog-posts">
+        {% for post in site.posts %}
+        <article class="blog-post">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+          {% endif %}
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      <p>Ukupan broj objava: {{ site.posts | size }}</p>
+    </section>
+  </main>
+  <!-- Include footer -->
+</body>
+</html>
