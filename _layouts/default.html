@@ -9,17 +9,32 @@
 <body data-lang="sr">
 
   <header>
-    <nav>
+    <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="{{ '/' | relative_url }}#hero" class="lang sr">Početna</a><a href="{{ '/' | relative_url }}#hero" class="lang en">Home</a></li>
-        <li><a href="{{ '/' | relative_url }}#about" class="lang sr">O nama</a><a href="{{ '/' | relative_url }}#about" class="lang en">About us</a></li>
-        <li><a href="{{ '/' | relative_url }}#portfolio" class="lang sr">Portfolio projekata</a><a href="{{ '/' | relative_url }}#portfolio" class="lang en">Projects</a></li>
-        <li><a href="{{ '/galerija.html' | relative_url }}" class="lang sr">Galerija snimaka</a><a href="{{ '/galerija.html' | relative_url }}" class="lang en">Video gallery</a></li>
-        <li><a href="{{ '/' | relative_url }}#contact" class="lang sr">Kontakt</a><a href="{{ '/' | relative_url }}#contact" class="lang en">Contact</a></li>
+        <li>
+          <a href="{{ '/' | relative_url }}#hero" class="lang sr">Početna</a>
+          <a href="{{ '/' | relative_url }}#hero" class="lang en">Home</a>
+        </li>
+        <li>
+          <a href="{{ '/' | relative_url }}#about" class="lang sr">O nama</a>
+          <a href="{{ '/' | relative_url }}#about" class="lang en">About us</a>
+        </li>
+        <li>
+          <a href="{{ '/' | relative_url }}#portfolio" class="lang sr">Portfolio projekata</a>
+          <a href="{{ '/' | relative_url }}#portfolio" class="lang en">Projects</a>
+        </li>
+        <li>
+          <a href="{{ '/galerija.html' | relative_url }}" class="lang sr">Galerija snimaka</a>
+          <a href="{{ '/galerija.html' | relative_url }}" class="lang en">Video gallery</a>
+        </li>
+        <li>
+          <a href="{{ '/' | relative_url }}#contact" class="lang sr">Kontakt</a>
+          <a href="{{ '/' | relative_url }}#contact" class="lang en">Contact</a>
+        </li>
       </ul>
       <div class="language-switcher">
-        <img src="{{ '/images/sr.png' | relative_url }}" alt="SR" id="btn-sr">
-        <img src="{{ '/images/en.png' | relative_url }}" alt="EN" id="btn-en">
+        <img id="btn-sr" src="{{ '/images/sr.png' | relative_url }}" alt="SR">
+        <img id="btn-en" src="{{ '/images/en.png' | relative_url }}" alt="EN">
       </div>
     </nav>
   </header>
@@ -30,10 +45,10 @@
 
   <footer>
     <a href="https://www.facebook.com/weldingmont" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+      <img src="{{ '/images/facebook-icon.png' | relative_url }}" alt="Facebook">
     </a>
-    <p class="lang sr">© Nikola Markovic - Sva prava zadržana</p>
-    <p class="lang en">© Nikola Markovic - All rights reserved</p>
+    <p class="lang sr">© Nikola Markovic – Sva prava zadržana</p>
+    <p class="lang en">© Nikola Markovic – All rights reserved</p>
   </footer>
 
   <script>
@@ -47,5 +62,6 @@
     document.getElementById('btn-en').onclick = () => switcher('en');
     switcher('sr');
   </script>
+
 </body>
 </html>
