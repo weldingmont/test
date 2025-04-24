@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="sr">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Početna</title><link rel="stylesheet" href="styles.css"></head><body>
+<html lang="sr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Početna</title><link rel="stylesheet" href="styles.css"></head><body>
 <header>
   <nav class="navbar">
     <div class="nav-links">
@@ -24,7 +23,7 @@
 
 <main>
   <section class="hero" id="hero">
-    <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4"></iframe>
+    <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" frameborder="0" allowfullscreen></iframe>
     <div class="hero-content">
       <h1 class="lang sr">Dobrodošli na Weldingmont</h1>
       <h1 class="lang en">Welcome to Weldingmont</h1>
@@ -32,17 +31,14 @@
   </section>
   <section class="contact-section" id="contact">
     <div class="contact-info">
-      <h2 class="lang sr">Kontaktirajte nas</h2>
-      <h2 class="lang en">Contact Us</h2>
+      <h2 class="lang sr">Kontaktirajte nas</h2><h2 class="lang en">Contact Us</h2>
       <p><strong class="lang sr">Vlasnik:</strong><strong class="lang en">Owner:</strong> Sladjan Marković</p>
       <p><strong>Email:</strong> weldingmontvr@gmail.com</p>
       <p><strong class="lang sr">Telefon:</strong><strong class="lang en">Phone:</strong> +381 65 826 2010</p>
       <p class="lang sr">📎 <a href="Weldingmont_Brosura_SR_bolje.pdf" download>Preuzmi brošuru (SR)</a></p>
       <p class="lang en">📎 <a href="Weldingmont_Brochure_EN_better.pdf" download>Download brochure (EN)</a></p>
     </div>
-    <div class="contact-map">
-      <iframe src="https://maps.google.com/maps?q=42.5281341,21.9071812&z=17&output=embed"></iframe>
-    </div>
+    <div class="contact-map"><iframe src="https://maps.google.com/maps?q=42.5281341,21.9071812&z=17&output=embed" frameborder="0" allowfullscreen></iframe></div>
   </section>
 </main>
 <footer>
@@ -57,6 +53,7 @@ function switcher(lang) {
 }
 document.getElementById('btn-sr').onclick = () => switcher('sr');
 document.getElementById('btn-en').onclick = () => switcher('en');
+// default to SR
 switcher('sr');
 </script>
 </body></html>
