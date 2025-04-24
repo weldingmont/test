@@ -3,96 +3,74 @@ layout: default
 title: Početna
 ---
 
-<!DOCTYPE html>
-<html lang="sr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weldingmont</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Header -->
-  <div class="header">
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">O nama</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#gallery">Galerija</a>
-      <a href="#contact">Kontakt</a>
-      <a href="#language">🇷🇸 / 🇬🇧</a>
-    </nav>
-  </div>
-
-  <!-- YouTube Video Background -->
-  <section id="home" class="video-background">
-    <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&loop=1&mute=1&playlist=PVL1ls59Us4" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <h1>Dobrodošli na Weldingmont website</h1>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>O nama</h2>
-    <p>
-      Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope. Naše usluge obuhvataju:
-      <ul>
-        <li>Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)</li>
-        <li>Obrada metala: sečenje, savijanje, zavarivanje</li>
-      </ul>
-      Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834.
-    </p>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>Portfolio Projekata</h2>
-    <div class="portfolio-posts">
-      <div class="post">
-        <h3>Post 1</h3>
-        <p>Opis projekta...</p>
-        <a href="#">Kliknite ovde da vidite sve objave</a>
-      </div>
-      <div class="post">
-        <h3>Post 2</h3>
-        <p>Opis projekta...</p>
-        <a href="#">Kliknite ovde da vidite sve objave</a>
-      </div>
-      <div class="post">
-        <h3>Post 3</h3>
-        <p>Opis projekta...</p>
-        <a href="#">Kliknite ovde da vidite sve objave</a>
-      </div>
+<!-- Hero Section with Background Video -->
+<section id="hero">
+    <video autoplay loop muted>
+        <source src="https://www.youtube.com/watch?v=PVL1ls59Us4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>Welcome to Weldingmont</h1>
+        <p>Your partner in metal structures</p>
     </div>
-  </section>
+</section>
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2>Galerija Snimaka</h2>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/RJxZ5XMDtuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dEMYrjXp0Jw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </section>
+<!-- O nama Section -->
+<section id="about-us">
+    <h2>O nama</h2>
+    <p>Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact">
+<!-- Latest Blog Posts Section -->
+<section id="latest-posts">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-posts">
+        {% for post in site.posts limit:3 %}
+        <div class="blog-post">
+            <a href="{{ post.url }}">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="/blog.html" class="view-all">Kliknite ovde da vidite sve objave</a>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+    <h2>Portfolio projekata</h2>
+    <div class="portfolio-items">
+        <div class="portfolio-item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PVL1ls59Us4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- Add more YouTube videos here as needed -->
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
     <h2>Kontaktirajte nas</h2>
-    <p>Vlasnik: Sladjan Marković</p>
+    <form action="https://formspree.io/f/mrgeswkd" method="POST">
+        <label for="name">Ime:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Poruka:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Pošaljite</button>
+    </form>
+
     <p>Email: weldingmontvr@gmail.com</p>
     <p>Telefon: +381 65 826 2010</p>
-    <p>📍 Pogledaj lokaciju:</p>
-    <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    
-    <form action="your_form_action_here">
-      <input type="email" name="email" placeholder="Vaš email" required>
-      <textarea name="message" placeholder="Vaša poruka" required></textarea>
-      <button type="submit">Pošaljite</button>
-    </form>
-    <a href="brochure.pdf" download="Brošura">Preuzmi brošuru</a>
-  </section>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© Nikola Markovic - Sva prava zadržana</p>
-    <a href="https://www.facebook.com/weldingmont" target="_blank">Facebook</a>
-  </footer>
-</body>
-</html>
+<!-- Footer Section -->
+<footer>
+    <p>&copy; Sva prava zadržana</p>
+    <a href="https://www.facebook.com/Weldingmont" target="_blank">
+        <img src="facebook-icon.png" alt="Facebook">
+    </a>
+</footer>
