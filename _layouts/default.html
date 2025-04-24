@@ -1,79 +1,51 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="{{ page.lang | default: site.lang | default: 'sr' }}">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }}</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1c1c1c;
-      color: #f2f2f2;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #1c1c1c;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-    nav a {
-      color: #f2f2f2;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    .lang-switch {
-      display: flex;
-      gap: 10px;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 960px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #00bcd4;
-    }
-    iframe {
-      border: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
 </head>
-<body>
+<body data-lang="sr">
 
-<nav>
-  <div>
-    <a href="#hero">Početna</a>
-    <a href="#o-nama">O nama</a>
-    <a href="#portfolio">Portfolio projekata</a>
-    <a href="#kontakt">Kontakt</a>
-  </div>
-  <div class="lang-switch">
-    <button onclick="toggleLang('sr')">🇷🇸</button>
-    <button onclick="toggleLang('en')">🇬🇧</button>
-  </div>
-</nav>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}" class="lang sr">Početna</a><a href="{{ '/' | relative_url }}" class="lang en">Home</a></li>
+        <li><a href="{{ '/onama.html' | relative_url }}" class="lang sr">O nama</a><a href="{{ '/onama.html' | relative_url }}" class="lang en">About us</a></li>
+        <li><a href="{{ '/blog.html' | relative_url }}" class="lang sr">Portfolio projekata</a><a href="{{ '/blog.html' | relative_url }}" class="lang en">Projects</a></li>
+        <li><a href="{{ '/galerija.html' | relative_url }}" class="lang sr">Galerija snimaka</a><a href="{{ '/galerija.html' | relative_url }}" class="lang en">Video gallery</a></li>
+        <li><a href="{{ '/kontakt.html' | relative_url }}" class="lang sr">Kontakt</a><a href="{{ '/kontakt.html' | relative_url }}" class="lang en">Contact</a></li>
+      </ul>
+      <div class="language-switcher">
+        <img src="{{ '/images/sr.png' | relative_url }}" alt="SR" id="btn-sr">
+        <img src="{{ '/images/en.png' | relative_url }}" alt="EN" id="btn-en">
+      </div>
+    </nav>
+  </header>
 
-{{ content }}
+  <main>
+    {{ content }}
+  </main>
 
-<script>
-function toggleLang(lang) {
-  document.querySelectorAll('[class^="lang-"]').forEach(el => {
-    el.style.display = 'none';
-  });
-  document.querySelectorAll(`.lang-${lang}`).forEach(el => {
-    el.style.display = 'block';
-  });
-}
-toggleLang('sr');
-</script>
+  <!-- Footer -->
+  <footer>
+    <a href="https://www.facebook.com/weldingmont" target="_blank"><img src="{{ '/images/facebook-icon.png' | relative_url }}" alt="Facebook"></a>
+    <p class="lang sr">© Nikola Markovic - Sva prava zadržana</p>
+    <p class="lang en">© Nikola Markovic - All rights reserved</p>
+  </footer>
 
+  <script>
+    function switcher(lang) {
+      document.body.setAttribute('data-lang', lang);
+      document.querySelectorAll('.lang').forEach(el => {
+        el.style.display = el.classList.contains(lang) ? '' : 'none';
+      });
+    }
+    document.getElementById('btn-sr').onclick = () => switcher('sr');
+    document.getElementById('btn-en').onclick = () => switcher('en');
+    switcher('sr');
+  </script>
 </body>
 </html>

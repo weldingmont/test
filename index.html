@@ -1,112 +1,51 @@
-<!DOCTYPE html>
-<html lang="sr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weldingmont</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body data-lang="sr">
+---
+layout: default
+title: Početna
+---
 
-  <!-- Header -->
-  <header>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#hero" class="lang sr">Početna</a><a href="#hero" class="lang en">Home</a></li>
-        <li><a href="#about" class="lang sr">O nama</a><a href="#about" class="lang en">About us</a></li>
-        <li><a href="#latest-posts" class="lang sr">Portfolio projekata</a><a href="#latest-posts" class="lang en">Projects</a></li>
-        <li><a href="galerija.html" target="_blank" class="lang sr">Galerija snimaka</a><a href="galerija.html" target="_blank" class="lang en">Video gallery</a></li>
-        <li><a href="#contact" class="lang sr">Kontakt</a><a href="#contact" class="lang en">Contact</a></li>
-      </ul>
-      <div class="language-switcher">
-        <img src="images/sr.png" alt="SR" id="btn-sr">
-        <img src="images/en.png" alt="EN" id="btn-en">
-      </div>
-    </nav>
-  </header>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="video-background">
+    <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+  <div class="hero-content">
+    <h1 class="lang sr">Dobrodošli na Weldingmont</h1>
+    <h1 class="lang en">Welcome to Weldingmont</h1>
+  </div>
+</section>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="video-background">
-        <iframe src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4"
-          frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-      <div class="hero-content">
-        <h1 class="lang sr">Dobrodošli na Weldingmont</h1>
-        <h1 class="lang en">Welcome to Weldingmont</h1>
-      </div>
-    </section>
+<!-- O nama Section -->
+<section id="about">
+  <h2><span class="lang sr">O nama</span><span class="lang en">About us</span></h2>
+  <div class="about-content">
+    <p class="lang sr">Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
+    <p class="lang en">Weldingmont Ltd. is a company from Vranje, founded in 2017. We design and install metal structures across Serbia and Europe.</p>
+    <p class="lang sr">Naše usluge obuhvataju:</p>
+    <p class="lang en">Our services include:</p>
+    <ul>
+      <li class="lang sr">Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)</li>
+      <li class="lang en">Metal construction assembly (halls, buildings, bridges, posts, fences, stairs, canopies, etc.)</li>
+      <li class="lang sr">Obrada metala: sečenje, savijanje, zavarivanje</li>
+      <li class="lang en">Metal processing: cutting, bending, welding</li>
+    </ul>
+    <p class="lang sr">Weldingmont d.o.o. je uspešno implementirao ISO 9001:2015 i BS EN ISO 3834. Sertifikaciju je izvršilo Alcumus ISOQAR.</p>
+    <p class="lang en">Weldingmont Ltd. has successfully implemented ISO 9001:2015 and BS EN ISO 3834, certified by Alcumus ISOQAR.</p>
+  </div>
+</section>
 
-    <!-- O nama Section -->
-    <section id="about">
-      <h2><span class="lang sr">O nama</span><span class="lang en">About us</span></h2>
-      <div class="about-content">
-        <p class="lang sr">Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
-        <p class="lang en">Weldingmont Ltd. is a company from Vranje, founded in 2017. We design and install metal structures across Serbia and Europe.</p>
-        <p class="lang sr">Naše usluge obuhvataju:</p>
-        <p class="lang en">Our services include:</p>
-        <ul>
-          <li class="lang sr">Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)</li>
-          <li class="lang en">Metal construction assembly (halls, buildings, bridges, posts, fences, stairs, canopies, etc.)</li>
-          <li class="lang sr">Obrada metala: sečenje, savijanje, zavarivanje</li>
-          <li class="lang en">Metal processing: cutting, bending, welding</li>
-        </ul>
-        <p class="lang sr">Weldingmont d.o.o. je uspešno implementirao ISO 9001:2015 i BS EN ISO 3834. Sertifikaciju je izvršilo Alcumus ISOQAR.</p>
-        <p class="lang en">Weldingmont Ltd. has successfully implemented ISO 9001:2015 and BS EN ISO 3834, certified by Alcumus ISOQAR.</p>
-      </div>
-    </section>
-
-    <!-- Latest Blog Posts -->
-    <section id="latest-posts">
-      <h2><span class="lang sr">Portfolio projekata</span><span class="lang en">Projects</span></h2>
-      <div class="blog-posts">
-        {% for post in site.posts limit:3 %}
-        <article class="blog-post">
-          {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}">
-          {% endif %}
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-        </article>
-        {% endfor %}
-      </div>
-      <a href="blog.html" class="view-all"><span class="lang sr">Kliknite ovde da vidite sve objave</span><span class="lang en">Click here to view all posts</span></a>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2><span class="lang sr">Kontakt</span><span class="lang en">Contact</span></h2>
-      <div class="contact-info">
-        <p class="lang sr">Vlasnik: Sladjan Marković</p>
-        <p class="lang en">Owner: Sladjan Markovic</p>
-        <p class="lang sr">Email: weldingmontvr@gmail.com</p>
-        <p class="lang en">Email: weldingmontvr@gmail.com</p>
-        <p class="lang sr">Telefon: +381 65 826 2010</p>
-        <p class="lang en">Phone: +381 65 826 2010</p>
-        <p class="lang sr">📎 <a href="Weldingmont_Brosura_SR.pdf" download>Preuzmi brošuru (SR)</a></p>
-        <p class="lang en">📎 <a href="Weldingmont_Brochure_EN.pdf" download>Download brochure (EN)</a></p>
-      </div>
-      <!-- Optional map or contact form could go here -->
-    </section>
-  </main>
-
-  <footer>
-    <a href="https://www.facebook.com/weldingmont" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
-    <p class="lang sr">© Nikola Markovic - Sva prava zadržana</p>
-    <p class="lang en">© Nikola Markovic - All rights reserved</p>
-  </footer>
-
-  <script>
-    function switcher(lang) {
-      document.body.setAttribute('data-lang', lang);
-      document.querySelectorAll('.lang').forEach(el => {
-        el.style.display = el.classList.contains(lang) ? '' : 'none';
-      });
-    }
-    document.getElementById('btn-sr').onclick = () => switcher('sr');
-    document.getElementById('btn-en').onclick = () => switcher('en');
-    switcher('sr');
-  </script>
-</body>
-</html>
+<!-- Latest Blog Posts Section -->
+<section id="latest-posts">
+  <h2><span class="lang sr">Portfolio projekata</span><span class="lang en">Projects</span></h2>
+  <div class="blog-posts">
+    {% for post in site.posts limit:3 %}
+    <article class="blog-post">
+      {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+      {% endif %}
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  <a href="{{ '/blog.html' | relative_url }}" class="view-all"><span class="lang sr">Kliknite ovde da vidite sve objave</span><span class="lang en">Click here to view all posts</span></a>
+</section>
