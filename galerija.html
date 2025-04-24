@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Galerija snimaka - Weldingmont</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Galerija snimaka</title><link rel="stylesheet" href="styles.css"></head>
 <body>
-  <!-- Include header -->
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="lang sr">Početna</a><a href="index.html" class="lang en">Home</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <section id="gallery">
-      <h2>Galerija snimaka</h2>
-      <div class="video-gallery">
+    <section class="video-gallery" style="margin-top:70px;padding:20px;">
+      <h2><span class="lang sr">Galerija snimaka</span><span class="lang en">Video gallery</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
         <iframe src="https://www.youtube.com/embed/RJxZ5XMDtuU" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/dEMYrjXp0Jw" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/14UBO7IYtBs" allowfullscreen></iframe>
@@ -21,6 +23,5 @@
       </div>
     </section>
   </main>
-  <!-- Include footer -->
 </body>
 </html>
