@@ -3,57 +3,65 @@ layout: default
 title: Početna
 ---
 
-<section id="hero" class="hero">
-  <iframe class="video-bg" src="https://www.youtube.com/embed/PVL1ls59Us4?autoplay=1&mute=1&loop=1&playlist=PVL1ls59Us4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <div class="hero-content">
-    <h1 class="lang sr">Dobrodošli na Weldingmont</h1>
-    <h1 class="lang en">Welcome to Weldingmont</h1>
-  </div>
-</section>
+# Dobrodošli na Weldingmont website
 
-<section id="about">
-  <h2><span class="lang sr">O nama</span><span class="lang en">About us</span></h2>
-  <div class="about-content">
-    <p class="lang sr">Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.</p>
-    <p class="lang en">Weldingmont Ltd. is a company from Vranje, founded in 2017. We design and install metal structures across Serbia and Europe.</p>
-    <p class="lang sr"><strong>Naše usluge obuhvataju:</strong></p>
-    <p class="lang en"><strong>Our services include:</strong></p>
-    <ul>
-      <li class="lang sr">Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice)</li>
-      <li class="lang en">Metal construction assembly (halls, buildings, bridges, posts, fences, stairs, canopies)</li>
-      <li class="lang sr">Obrada metala: sečenje, savijanje, zavarivanje</li>
-      <li class="lang en">Metal processing: cutting, bending, welding</li>
-    </ul>
-    <p class="lang sr">Weldingmont d.o.o. je uspešno implementirao ISO 9001:2015 i BS EN ISO 3834. Sertifikaciju je izvršilo Alcumus ISOQAR.</p>
-    <p class="lang en">Weldingmont Ltd. has successfully implemented ISO 9001:2015 and BS EN ISO 3834, certified by Alcumus ISOQAR.</p>
-  </div>
-</section>
+# Welcome to the Weldingmont website
 
-<section id="portfolio">
-  <h2><span class="lang sr">Portfolio projekata</span><span class="lang en">Projects</span></h2>
-  <div class="blog-posts">
-    {% for post in site.posts limit:3 %}  
-    <article class="blog-post">
-      {% if post.image %}<img src="{{ post.image }}" alt="{{ post.title }}">{% endif %}
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-    </article>
-    {% endfor %}
-  </div>
-  <a href="blog.html" class="view-all"><span class="lang sr">Kliknite ovde da vidite sve objave</span><span class="lang en">Click here to view all posts</span></a>
-</section>
+## O nama
 
-<section id="contact">
-  <h2><span class="lang sr">Kontaktirajte nas</span><span class="lang en">Contact Us</span></h2>
-  <div class="contact-section">
-    <div class="contact-map"><iframe src="https://maps.google.com/maps?q=42.5511,21.8963&z=15&output=embed" frameborder="0" style="border:0;" allowfullscreen loading="lazy"></iframe></div>
-    <div class="contact-info">
-      <p class="lang sr"><strong>Vlasnik:</strong> Sladjan Marković</p>
-      <p class="lang en"><strong>Owner:</strong> Sladjan Markovic</p>
-      <p><strong>Email:</strong> weldingmontvr@gmail.com</p>
-      <p><strong>Telefon:</strong> +381 65 826 2010</p>
-      <p class="lang sr">📎 <a href="Weldingmont_Brosura_SR_bolje.pdf" download>Preuzmi brošuru (SR)</a></p>
-      <p class="lang en">📎 <a href="Weldingmont_Brochure_EN_better.pdf" download>Download brochure (EN)</a></p>
-    </div>
-  </div>
-</section>
+Weldingmont d.o.o. je kompanija iz Vranja osnovana 2017. godine. Bavimo se izradom i montažom metalnih konstrukcija širom Srbije i Evrope.  
+
+Naše usluge obuhvataju:  
+• Metalne konstrukcije i montiranje (hale, objekti, mostovi, šipovi, ograde, stepeništa, nadstrešnice, itd.)  
+• Obrada metala: sečenje, savijanje, zavarivanje
+
+Weldingmont d.o.o. je uspešno implementirao sistem menadžmenta kvalitetom ISO 9001:2015 i BS EN ISO 3834, čime je poslovanje usklađeno sa međunarodnim standardima. Sertifikaciju je izvršilo renomirano sertifikaciono telo Alcumus ISOQAR Limited iz Mančestera.
+
+## About Us
+
+Weldingmont Ltd. is a company from Vranje founded in 2017. We specialize in the production and installation of metal structures across Serbia and Europe.  
+
+Our services include:  
+• Metal structures and assembly (halls, buildings, bridges, piles, fences, staircases, canopies, etc.)  
+• Metal processing: cutting, bending, welding
+
+Weldingmont has successfully implemented a quality management system in accordance with ISO 9001:2015 and BS EN ISO 3834 standards. The certification was conducted by Alcumus ISOQAR Limited, Manchester.
+
+## Portfolio projekata
+
+## Project Portfolio
+
+{% for post in site.posts limit:4 %} 
+
+### {{ post.title }}
+
+{{ post.content }} 
+
+{% endfor %} 
+
+[Kliknite ovde da vidite sve objave]({{ '/test/blog.html' | relative_url }})
+
+## Kontaktirajte nas
+
+## Contact Us
+
+Vlasnik: Sladjan Marković
+
+Email: weldingmontvr@gmail.com
+
+Telefon: +381 65 826 2010
+
+[ Pogledaj lokaciju ](https://maps.app.goo.gl/uJg1H5uoKwakYtp78)
+
+[ Preuzmi brošuru (SR) ](/test/Weldingmont_Brosura_SR_bolje.pdf)
+
+[ Download brochure (EN) ](/test/Weldingmont_Brochure_EN_better.pdf)
+
+### Formular za kontakt
+
+Vaš email:  
+Your email:  
+Vaša poruka:  
+Your message:  
+
+Pošalji Send
