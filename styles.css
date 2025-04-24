@@ -1,102 +1,27 @@
-/* Global styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #333; /* dark gray */
-  color: #fff; /* white text */
+/* Add at end of styles.css */
+
+/* O nama two-column layout */
+.onama-section {
+  padding: 40px 20px;
 }
-header {
-  background: #222;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-.nav-links li {
-  margin-right: 20px;
-}
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-.language-switcher img {
-  width: 24px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-main {
-  padding-top: 70px;
-  padding: 20px;
-}
-/* Hero */
-.hero {
-  position: relative;
-  width: 100vw;
-  height: 60vh;
-  overflow: hidden;
-}
-.hero iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-}
-.hero-content {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.hero-content h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-}
-/* Contact Section */
-.contact-section {
-  margin-top: 40px;
+.onama-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.contact-info, .contact-map {
+.onama-text {
   flex: 1 1 300px;
 }
-.contact-info {
-  background: #444;
-  padding: 20px;
-  border-radius: 8px;
-}
-.contact-info p, .contact-info a {
-  color: #fff;
-  margin-bottom: 10px;
-}
-.contact-map iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
-  border-radius: 8px;
-}
-/* Footer */
-footer {
-  margin-top: 40px;
+.onama-image {
+  flex: 1 1 300px;
   text-align: center;
-  padding: 20px 0;
-  background: #222;
 }
-footer a, footer p {
-  color: #fff;
-  text-decoration: none;
+.onama-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
