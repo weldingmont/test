@@ -11,8 +11,8 @@ main { padding-top: 70px; }
 .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
 .hero-content h1 { font-size: 3rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
 section { margin: 40px 20px; }
-#about, #contact { max-width: 800px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 8px; border: 2px solid #ccc; }
-#about h2, #latest-posts h2, #contact h2 { font-size: 2rem; margin-bottom: 15px; text-align: center; }
+#about, .contact-section .contact-info { background: #fff; padding: 20px; border-radius: 8px; border: 2px solid #ccc; max-width: 800px; margin: 40px auto; }
+#about h2, #latest-posts h2, #contact h2, #blog h2, .video-gallery h2 { font-size: 2rem; margin-bottom: 15px; text-align: center; }
 #latest-posts { max-width: 1000px; margin: 40px auto; }
 .blog-posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .blog-post { background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: transform 0.3s; }
@@ -21,6 +21,9 @@ section { margin: 40px 20px; }
 .blog-post h3 { padding: 15px; font-size: 1.4rem; }
 .blog-post p { padding: 0 15px 15px; }
 .view-all { display: block; text-align: center; margin-top: 20px; text-decoration: none; font-weight: bold; color: #0066cc; }
+.contact-section { display: flex; gap: 20px; flex-wrap: wrap; max-width: 1000px; margin: 40px auto; }
+.contact-map { flex: 1 1 300px; min-height: 300px; border-radius: 8px; overflow: hidden; }
+.video-gallery .videogrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 0 20px; }
 footer { background: #333; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px; }
 footer img { width: 24px; }
 footer p { margin-top: 10px; font-size: 0.9rem; }
