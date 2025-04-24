@@ -1,15 +1,16 @@
-/* Centering portfolio page */
-#portfolio .container-center {
+/* Galerija page update */
+#gallery {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
-#portfolio .blog-posts {
+.videogrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-items: center;
+  margin-top: 20px;
 }
-.post-content iframe {
-  width: 100% !important;
+.videogrid iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
 }
