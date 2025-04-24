@@ -4,23 +4,25 @@ title: Portfolio Projekata
 ---
 
 <section id="portfolio" class="portfolio-section">
-  <h1>
-    <span class="lang sr">Portfolio Projekata</span>
-    <span class="lang en">Projects</span>
-  </h1>
-  <p>
-    <span class="lang sr">Ukupan broj objava: {{ site.posts | size }}</span>
-    <span class="lang en">Total posts: {{ site.posts | size }}</span>
-  </p>
-  <div class="blog-posts">
-    {% for post in site.posts %}
-      <article class="blog-post">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}">
-        {% endif %}
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <div class="post-content">{{ post.content }}</div>
-      </article>
-    {% endfor %}
+  <div class="container-center">
+    <h1>
+      <span class="lang sr">Portfolio Projekata</span>
+      <span class="lang en">Projects</span>
+    </h1>
+    <p>
+      <span class="lang sr">Ukupan broj objava: {{ site.posts | size }}</span>
+      <span class="lang en">Total posts: {{ site.posts | size }}</span>
+    </p>
+    <div class="blog-posts">
+      {% for post in site.posts %}
+        <article class="blog-post">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+          {% endif %}
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <div class="post-content">{{ post.content }}</div>
+        </article>
+      {% endfor %}
+    </div>
   </div>
 </section>
